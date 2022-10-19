@@ -1,0 +1,285 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Odoo_Crear_Factura" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="str_FacturaNro" Type="InArgument(x:String)" />
+    <x:Property Name="str_Proveedor" Type="InArgument(x:String)" />
+    <x:Property Name="str_FechaFactura" Type="InArgument(x:String)" />
+    <x:Property Name="str_FechaContable" Type="InArgument(x:String)" />
+    <x:Property Name="str_PlazoPago" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Odoo_Crear_Factura.str_FacturaNro>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Odoo_Crear_Factura.str_FacturaNro>
+  <this:Odoo_Crear_Factura.str_Proveedor>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Odoo_Crear_Factura.str_Proveedor>
+  <this:Odoo_Crear_Factura.str_FechaFactura>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Odoo_Crear_Factura.str_FechaFactura>
+  <this:Odoo_Crear_Factura.str_FechaContable>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Odoo_Crear_Factura.str_FechaContable>
+  <this:Odoo_Crear_Factura.str_PlazoPago>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Odoo_Crear_Factura.str_PlazoPago>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>888,2877</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Odoo_Crear_Factura_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Odoo_Crear_Factura" sap:VirtualizedContainerService.HintSize="494,2812" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Utilizar Navegador Chrome: Facturas - Odoo" sap:VirtualizedContainerService.HintSize="452,2720" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d5657e34-a556-43db-b002-611e72684036" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Crear Cabecera Factura" sap:VirtualizedContainerService.HintSize="418,2504" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="376,86" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="89bc5fae-2131-49ea-9d57-8590cc23c65f">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Clic 'Crear'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#action=281&amp;model=account.move&amp;view_type=list&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="24, 202, 61, 31" ElementType="Button" FriendlyName="'Crear'" FullSelectorArgument="&lt;webctrl aaname='                 Crear             ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                 Crear             ' tag='BUTTON' type='button' class='btn btn-primary o_list_button_add' check:innerText='CREAR' /&gt;" Guid="bc88a83c-33e3-42e9-8709-294de2948f26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAjCAYAAADLy2cUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJcSURBVGhD7ZbBattAEIbzKn6EvEKOPfbYax8hx1x7zNFHB3LJxaCjTRswODgUHIRrCKiYFJk2doSKg4pKFUxs/s54tdJKVi1ZtJdmPvhJPLM73v1X2vEBBIgJRGLCwfnZi5NGTCDEBEJMIMQEQkwgxARCTCDEBEJMIMQEop4JVh+nXohgHU9eL+HMbvEqzh97yziREvzy0bxq/zHPBN4w8z2njxxd4eM4jbHK6leVpoYJbVrcimas4PlTNB0Hlh/hiSLet8FmjFpkCGvQx5vhGK1ZgIC/ZPmA43ze0Ov3xiYsByNt8qODho7n5xfUT2qUSLO/CYN7eDT+6fvYWFgX1k8KPvt4R5/VIgO0kvwZmptTVbGifF5HbkhjIowWEf0NcXGZ5srq61iZNPubcLfxHM5dNn7Y49P8gEP6P7/IxtUtRhwik04K8tvqo8N7j+7x9uaBRgLutJvky+qndXZL89dMMKUWmeM5RMfecSeYj/K1etq8Gb9eQ/R4OBtSsX5Vaf7hk6Df2SlcnvBjgqN4bCav1e8mr9eJz3dOhM61OZ4uyE8F8wvqV5Wm/p3g20Z8952gNrVE70Z9zuezokdbX4g5+B4qmp+vX1Wa/U2gDbcC1R3c+YS6wyTpDsFctbitTV5+yZxW5iQNcXdoOAseCW9uGzkbPb4j1gs0rfL66Vp3S1PDBFL+d8KKfid8tTevAueLTlqdFvf8dpzfJvA+44KbwprmGt2ApboFXZBut7S+OW+XNPVM+E+kERMIMYEQEwgxgRATCDGBEBMIMYEQEwgxgUhMeMmICQB+A2hcztChpRMEAAAAAElFTkSuQmCC" InformativeScreenshot="9fc6ff533768ef5bbb9aab9f38978b30.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Facturas - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Diario'" sap:VirtualizedContainerService.HintSize="376,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="673, 481, 287, 24" ElementType="InputBox" FriendlyName="'Rendiciones de'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='o_input ui-autocomplete-input' aaname='Diario' /&gt;" Guid="ff872076-3ddc-40ec-814f-298807eebd1e" ImageBase64="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" InformativeScreenshot="1663910df36f53a7cc7ee138079429dc.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 481, 34, 20" ElementType="Text" FriendlyName="'Diario'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='o_form_label o_required_modifier' aaname='Diario' check:innerText='Diario' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAYAAACWTY9zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG1SURBVEhL7ZTPa4MwFMf318pACmEI0jLqQAqeNpCBFKRMSntYd2wO62UwenEHYfTgYXhtD/YqlEL5Lolxra6/lB3K8AsB817eyycvL17hQlWDlVUNVlb/AGwxgaVrsF7n0lBCFWJ/wIKuAkXZDrVpYfgRSy/TgsK8VqANQmkooQqxBTAC89GF23NgaSmgOa5QoT9QAcwAXUjDegaXMNu1DX/F5uzUBq9mN0j9Sx9eh0AVFVah2RRRwh0BHG67deBaKhTiISzGbmL4TyaImsaSjgd/mboyHQZjCvtEVM3h+XLJ56DtdL337mM6MMU60udXJcH4aGjQHt4QF8CyvJo1xOjlHi12zcoNO8BGuIWOgs3HhkjwG6yg1RQ295kUcQamDxFlG+Vi2U1wEH2EKPUietbEPu6nNDBVrBiQfFHYTXZV3JaNNmW1lGDiWyoXu8cfOCLe2Onnw2CJD+dgj4XwuE93ESzXbL672SmwShU78ir3JScWRqzHJr2WWHseWL7H6Ng5p8e2Y99/bDd5MhvCaPC1/EWyg4gK8iqcBsu/SrbX3ZFXeWmqwcqqBiurGqysLhQM+AblZjAgfhRUTQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Facturas de'" sap:VirtualizedContainerService.HintSize="376,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="674, 536, 285, 26" ElementType="Text" FriendlyName="'Facturas de'" FullSelectorArgument="&lt;webctrl id='ui-id-134' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ui-id-134' tag='A' type='' class='ui-menu-item-wrapper' aaname='Facturas de Proveedor (ARS)' check:innerText='Facturas de Proveedor (ARS)' /&gt;" Guid="fb4263e1-a259-445e-ba3c-2abc9f1b85a8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASEAAAAeCAYAAABjRqjXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASDSURBVHhe7Zu9TiRJEITvaXExwcTFxcTFxMTFxeQVeAAQYGLO6VsRpyC2enb3runqk+KTSt1TlX+VlZXMrLR/PT8/Hx4eHg6llLIV9Bx6z+vr66FNqJSyOW1CpZSptAmVUqbSJlRKmUqbUCllKm1CpZSptAmVUqbSJlRKmcomTeju7u5wcnLy07i8vDx8fHx8Sv3/eX9/P5yfnx8eHx8/Z36Pp6enw+np6U/5ub6+/pTYH5wb58fZrgH2rq6ufuTCIQfklNw6zGe+RjnTmWidPLsP5P/0vMq6bNaEvqPhUEBZdDP5L03o7Ozsy+WQrbUu+dqs3YSwk7bIAT4YmdPR2auZS3aUw8y1fPAsc2gTWhEV/RpNCL4rb2uwZhNaagTY5nxHeVg6e59fyqtsCt7X2Ef5d+ymCVEYS1+ZedfPFa1hU/LocvFpACpkL0DGxcXFjxiQR1aXSDZSV/4kvwRrksOeNyE1pV/Z8Vgdzxt75OcKcWnO41ReAFmGSPueO9kSSzbB18gnwy+vn6H7H8XukBeXB50Paxk/IJ864PPKv8c4Ah+juMo2bNaEVJwafumzCEaFpAvMU7ou5/PghavL48XIu3RV8Mx58QO6XDbZdTI27ZPPbhM8nmS0JtvSJ1bf38i31jMXrCm/ueY5TJsum/thjb3qs/uQHa1l7AnrkhWZ95TxuAU6nLPiB8Wp4WsCH/ganU35fnbzTUio2FVgfhESL8SU84vt7yPQ0aWR/9+JN33KDvP4yuZFrHnZAFl9w/Dhl8z3Csd8+zug5+8eg8eJjO9buWA+c6g1z5nb5V22MnbHfTjou72MDXuZL4brJNIh19oHZL7KtuyiCfkl5Emxq2iP6XpxU0B+Kf3S+LtAXoUrnypgXQytL/nP2KSHbbfvQ/E6o/gS3yuk77xIrCPPPHI8c18aupTo5BqD+cwvYJ+19A0eX8bueM6E7I1ikVzaxF/GtwR6nrtRDGU7dtGEsqD886j4xTE5v9h5yVV0xDX67OhCjNbSp2SZx9fSz7gk4xvhe4VjvkH+7+/vv+jxPtoLoLt0Thmj52yUP95lK2N3pKu4YSkOtzOyyWfXI4aUAY8NMndlW3bThLROkfOXWcUzuly6DMhITnqSw6f+wrsO4Ad/0kWHv7LopD/JjgpUsuiB7PCUntZS1sn4RvheIePELp+ZB/lXDgTyLud6aRM95TRzpjXthyfryMmO1jL2hDXJQn4WHvvIZvrNGCFlgLn+m9A8dtGEVCxcYORub2+/yPu6fyXnKR1kKUrJ3Nzc/FNYjLzk0mWooFXU6S+L3XFZ/DEUnwr+V3ZG8SUen3DfPFN/Ke/MK6bUc5uM0QVmnie2fZ34pOexjmJ3yJfW8b+UC28gSza1t6Uz8DXB51GeyjZs0oRKOQaNgibAcwY0M2+mZVvahMouoAnMaASzG2BpEyo7gZ9Co/879t3wLSh/npVtaRMqpUylTaiUMpU2oVLKVNqESilTaRMqpUylTaiUMpUvTejl5aVNqJSyKfQcek+bUCllCmpCb29vh78BSfVHirOw1ckAAAAASUVORK5CYII=" InformativeScreenshot="fff96f6d1e71b4d86aa24be028f268a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 481, 150, 29" FriendlyName="'Diario'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='o_td_label' aaname='' check:innerText='Diario' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAhCAYAAAAh8rKhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVHhe7djPa9pgAMbx/bEqBSmEEZCWUQdSyGkDGYRCKJNSD3NHc1gvg1EP2UEYPXgYXvWgR4M/qj573zdJGzPjj6g5pM8XXqjvm7dePrxJfAfGUojQWCoRGkslQmOpRGgslQiNpdLu0PoPMEo6jB89f2KPDtnLMtELtPZNAYXC6yheGKj/Hviror6NylkB+n3Hn9ijQ/ayTBSBpqHyxYJ1a8LQPXCVJk8hdngRaGXYfX9i9gRLE3NnVTgT8VmcSmV52t20vfWhg9q1hqI6AYvQqza6rlxow5RzH0xYRhEFrYZOdO9iAOdrBVrR26td1+AMvSWWzeKhiTp3mjrVTOljBUsP9pV3fe2Xg8f7irpOu5O3Rh+aHOc69M8/MYhAC/6vbtTR+P4Jl+K2WngvQC7UMstgG6H1mmUF4n9okSaPqMq1io1BAK1URzeAs7JXnJQSVqmBrreK7jddfY/1x59gmSvhiQa4f21UL8StUc4F48oWZ50PTf3tt7J3zXrbVPvLfB7MbPHQXAdm7DNaBzW5VrLQHs7E5zCebdB4or3FItA2vHWuw6IZaIhntIfbS3XtbtBWn9HspslntDdQBNrrWPc7WhiL+1RH+VxeK984BUx1wslTaju01bdO8V0f+daZ9V6gMXbKCI2lEqGxVCI0dvKWyyWhsdMlgQWD0NhRC+MKD0JjR2sdMDkWiwWhseMUBywYhMYObhOwfD6vBqGxg4pDNp/P1ZDIcrkcobHkbUP2/PyMVqulBqGxRO2CbDabKWQyQmN7twmZBBYgm06nhMaSF4csfJJJZJPJhNBY8qLQ4pCNx2NCY8mKIgvfMqPIXNclNJasKLToaRZGNhqNfGjAP4f4CoatnRL6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <If Condition="[str_Proveedor.Contains(&quot;LLAMADAIP S.R.L&quot;)]" DisplayName="If (arreglo deberan tenerse en cuenta los nombres de sistema de los proveedores para crear tabla de equivalencias)" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,154" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[str_Proveedor]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Llamada IP</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Proveedor'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Text="[str_Proveedor]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="191, 398, 287, 23" ElementType="InputBox" FriendlyName="'INPUT o_field_input_200'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='o_input ui-autocomplete-input ui-autocomplete-loading' aaname='Cliente' /&gt;" Guid="fc01dbf3-233f-42f3-9565-fbd19875e046" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASMAAAAbCAYAAAA3fulZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVHhe7daxDYNAFAVBV0uBXBv0dBYS2ASkoA1mpJfcz1f3mQABYgQkiBGQIEZAghgBCWIEJIgRkCBGQIIYAQliBCSIEZAgRsCj1nWdy7Lcbr+dxAh43F2QriHaiRHwimuQxhjH658YAQliBCSIEZAgRkCCGAEJYgQkiBGQIEZAghgBCb8YbdtmZvb6Tn5GQIIYAQliBATM+QVHyoniXLx4eAAAAABJRU5ErkJggg==" InformativeScreenshot="c493b8f03dd46dc2761f189e89da85ef.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="41, 398, 60, 20" ElementType="Text" FriendlyName="'Proveedor'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Proveedor' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Proveedor' type='' tag='LABEL' class='o_form_label' check:innerText='Proveedor' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJuSURBVFhH7ZbBa9swFMb314aAKZhiCAmlPpiB2SEFX0zBlIRRH5YcrR02aGBkjI1hKIblMHzZIT0ECj4YSqF8e0+W7RoTtWMLdNhfEZL1nqSnn56UvkLH1QNQdWfVA1B1Z9UDUPX/qdjHYDCAHW1Vx5+rBnAjYNNkPGFVjibwohS5cnlxOgiAsYvgIqDiw7UKEJPlL+X0wnQQAOex6iDla0y571RgS3/ilIFM4c8sGAMXq4xcfgp4Y6OVMdlHR/a5V+TE+jGHSd/mLJGf2fUC7qgYZxw7CJM6z/bbciSXNowhrWXYCGdT6VMC2BcLkYLPfSc+Apfs5hwb2f8EgOx6jgn3OQK7CgAVw4Q1CpHcruCqYPzlAsFrU9rlpjOysa+3xj3Nlb6zyGZizvsv1+LN0bjpCbWHBPRWb7v/4hXr00ZEFMI5pjZ9SwC6WEoAXI4sWGcr2k8h/RvAZWghiJljnQFrdSC798Upe595i6S7NTweI4FlWL3h8T7ihx2EQ20inzwAm7ccnILB+lakMgersyUXvL6FRdq0MQB9LAoAHVpK6z+W5g0IIT5tsL1T9goAbajsiWy5qF8lTdMnu3KpTZuJi2DK9I/P2addeCNP22yIGzlN4w3Qx6IAyKvclP4NaKgNQE+dpK6BNZ6QX32q5SkH3ylPsqwqOcHW2f46A/41gMa9iwTCxr1jqWvA86r0l0oXxdtC9zyIPkBcerBHNC9fLY3t2W9AK5ZDASA1Xl7Dav3fUFyDOv1LNceZcGZfsVOA9ttypEtX/QrQWmfFqUsArXGPY3kOgI6qB6DqzqoHoOrOqgeg6s6q4wCA387xPwVTiJoYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="376,136" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2539be18-eaa3-404d-9e08-7346622fd9f6">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Fecha factura'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Text="[str_FechaFactura]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="673, 398, 287, 23" ElementType="InputBox" FriendlyName="'09/09/2022'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='o_datepicker_input o_input datetimepicker-input' aaname='Fecha factura' /&gt;" Guid="cb33418a-f415-46d9-8c18-66e69b140600" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASMAAAAbCAYAAAA3fulZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVHhe7dqxSxtRHAfw+zPeGnARHHTzxgYczNaAQw8cJCCU4CDBQUIXORwkOMjRoYQOhXMopEPgOhTSRYiDchkKcRDi4JDBIYPDDQ7fvnf3tC+5s7R6yg3fDxzk+Uveubwvv/fuLBARFQDDiIgKgWFERIXAMCKiQmAYEVEhMIyIqBAYRkRUCAwjIiqEjDCKEB45mBcWLKsEe8NDeKtL0uSkBWdByJrA/DtZm+iC6bKNykYHSSnv+SboHzw+XzTw9HwWSss1eINIV2TtwkdjtRTXxEIFje5IV6TbIfydCkqyZol5VHYCGFUiemGpMIp+NiGWXfTjlS8X/p4NsduTkSKpUBAO/KukNvzkQKz5GKuhITxYQuNHEgJ5zxce2liSQTG+k4O7CXpqvq1A/lqKemgKG+6Jjq0TF7Zooqd+ehOgLqrwfiW16NKHI7/r/VKjCYL3AtWPQz3PCP66gH00VCMiegWpMOrvWah+MXqCKx9V4SKUH8dfHVgf+snfY300LQedqfTow53TAaBGuc43RrBdhncWFxKnLqz7AFOf3/pGRyND5a2Aq75/5qG8LUMsKUhj+GsW3FP1OYS30kBg3Hd8XIW1Z/5vRPSSUmHUWbfQPNED5VqGhyU7G/kxXqBT4WEu6ITqhOwDFTXKOOf50kafKrAPk3o63NLzPbjtoTFXR3Cjx1Mi9HZKqHeTLoqInqbb7WJzczPzUjVTKoxSi9cIj+ltVYTxdxkUlvn9CTobZbQv9TArDJ4137RIdkK22gLqM6N0N/NYGKltWAnOcfap0OjYQWnd7LCI6KmyAmk2iJT/6oyUUbeBylxyyOsctdFcrMK/1sWbDmqrbWMR/70zUv5vvj+iQQuVhRo6cZAl/q0zGiHYKqO830/OrWaMunWU3/wJOCJ6PjOQsoJISYVRuC+mz3hk91LWZzwpqrNZbD3URp8rqH2b3trkPV/syoczd99RGc5ciJkzo/aKPjOKJQfotuyesoIoPvA2Oi0iej2pMMp6+rWUsXgnFx0035jnKiFai3UEM9mR93yPBpGS9TRtUd47vln01yCa3fIR0etKhZFatOFRDbbaOqn3eN63MTQXaLzNkn9fq8PTiz4mt032/SP7KfnOp57OqfeEZq/7rZh6z6i2nLxLVFquo32hZ4jvk/Hb+Elcsp1L1Sxjy0hELyojjJ4iQm/XRmugh8+W93xEVHQ5hRER0fMwjIioEBhGRFQIDCMiKgSGEREVwkMYnZ+f8+LFi9erXiZ2RkRUCAwjIioEhhERFQDwG4jlnxFAmtAsAAAAAElFTkSuQmCC" InformativeScreenshot="7b4818e42da5305ec24d062dcdd7691a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 398, 80, 20" ElementType="Text" FriendlyName="'Fecha factura'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl idx='2' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='o_form_label' type='' tag='LABEL' aaname='Fecha factura' check:innerText='Fecha factura' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALdSURBVGhD7ZdNa9tAEIb7a01BBEQQmJoQFUxAGOqDCIiACREhOtSB+hAVkkIFwRf5YCiCplAEpVDnkFAQJVAM4e1+WZblaLNON7SHfWFB7OyMZh7N7qIXMNIqA1SzDFDNMkA1ywDVLANUs54R6BRBq4XWboyZmHmyfiTw2xZaJF73/Y2Y/D9VAp0ekOIpgNoIpmLBxtIFtEDSo7nY6J7EGH8uxPzm4jW6iK/FxDOoBpQkvT/A4HA5km9iwcbSBVTE2Rn9daf/A6ANL7svkJ16cCy6xoK9FyG7W9hukB65sF5ym+PHyJltASJA6Duw6POWh1E+Z264TRHu2Xx+xa8qEaMy2I6R+TbkU9+BwXSGeJc+B+QtXFUGszOXresfhKxu7yPZGQo514B2MPxSoCjE+MWLXwSnIIenfXRosr2EbEbg6thmtk4QIz7pwqYv208xL2GQrj+s2Loxbkiv8WJchJcpxsTG4h9fsfctVSCfRPCoXzvAxSRF/lPu25TPbZ4i8qifg+C8GkcOlIKz2w6iTC1n+RnKtusVQps82yGye742DajdQ1JkGFC45XYknfyOHBVHY3xfAC23/AyjHeq3LKDU7zF8upbBrqsep6YVX1k+q8BoPkoderm2bbgaclbo0PVtxwd9sazYdaDVAu6+xvBf8Zu7HEpxZL5y+E8BWr2UVXJWOENFh24PML2twC7uML+vd8QcsyxFOslJb8iAiphtGrPy0R4EUbfJfGX51GvcFKhazkqXUv62w4LbewPEH2JEvgvnYAq6GR49Qx8EKgq3PQzJeXRxyOOrAZX7NudD63C4rTfA6BP55KzmxVpy6dK4jUDVclYCSpod+ZmPzhZPwNruIpyIk+OxW/5BoCRiFsFl8ahPAI99/SFytraq9U6Q+jbmQ3SdoO/QefKDcE7yr/wwWK8jhG+orQmoWs4lUCM9MkA1ywDVLANUswxQzTJANcsA1SwDVKuAP8PDOBQmgGlHAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Fecha contable'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Text="[str_FechaContable]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="673, 425, 287, 24" ElementType="InputBox" FriendlyName="'09/09/2022'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='o_datepicker_input o_input datetimepicker-input' aaname='Fecha contable' /&gt;" Guid="bb06c445-673d-472b-bdd3-99a05f1d4d85" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASMAAAAcCAYAAAAqe9nhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVHhe7duxS+NQHAfw/BlvLbgIDrqZ0YKD3Sw4XMBBCoIUBykOR7lFwg1SbpBwg5QbDuJw0BsKueGgtwh1EOIg1EGog0MHhw4OGW743nvJ03ttopwavQzfDzzI6699cXlf3nuJFoiICoBhRESFwDAiokJgGBFRITCMiKgQGEZEVAgMIyIqBIYRERVCRhhFCA8czAoLllWCveEhvNUlaXzcgjMnZE1g9p2sjXXBdNlGZaODpJT3eGP09x8eLzrz9HgWSos1eGeRrsjahY/GSimuibkKGt2hrki3A/i7FZRkzRKzqOwGMKpE9MpSYRT9akIsuujHM19O/D0b4n1PRoqkQkE48K+S2uDQgVjzMVJdQ7i/gMbPJATyHi/8ZGNBBsXot+z8HqOnxtsO5K+lqIemsOEe69g6dmGLJnrqpzcB6qIK7zypRZc+HPld71z1xgi2BKqfB3qcIfx1AftgoHpE9AZSYdTfs1D9aqwJrnxUhYtQXo6+ObA+9JPPY300LQedifTow53RAaB6uY43QrBThncaFxInLqy7AFPXq76xopGhsirgqu+feijvyBBLCtII/poF90Rdh/CWGwiM+46OqrD2zL+NiF5TKow66xaax7qjXMvwsOTKRl7GE3QiPMwJnVArIXtfRY0yynm8tOFhBfanpJ4Ot/R49257aMzUEdzo/oQIvd0S6t1kFUVEz9PtdrG5uZnZVM2UCqPU5DXCY3JbFWH0QwaFZX5/jM5GGe1L3c0KgxeNNymSKyFbbQH1mVF6NfNQGKltWAnOUfap0PDIQWndXGER0XNlBdJ0EClPWhkpw24DlZnkkNc5aKM5X4V/rYs3HdRW2sYkfnxlpDxtvL+isxYqczV04iBL/NvKaIhgu4zyx35ybjVl2K2jvPQ34Ijo5cxAygoiJRVG4UcxecYjVy9lfcaTolY286372vBLBbXvk1ubvMeLXflwZu5WVIZTF2LqzKi9rM+MYskBui1XT1lBFB94GystIno7qTDKevq1kDF5xxcdNJfMc5UQrfk6gqnsyHu8B4NIyXqaNi/vHd8sejSIprd8RPS2UmGkJm14UIOttk7qPZ6tNgbmBI23WfLztTo8Peljcttk3z2yn5DveOrpnHpPaLrdbcXUe0a1xeRdotJiHe0LPUJ8n4zfxk/iku1cqmYZW0YielUZYfQcEXrvbbTOdPfF8h6PiIoupzAiInoZhhERFQLDiIgKgWFERIXAMCKiQmAYEVEh3IeR+X8jbGxsbG/RTAwjNja2/9ZM3KYRUSEwjIioAIA/eonP7kpJxEAAAAAASUVORK5CYII=" InformativeScreenshot="0eefb267e9663484e63a1a9491c0ea65.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 425, 89, 20" ElementType="Text" FriendlyName="'Fecha contable'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='o_form_label o_required_modifier' aaname='Fecha contable' check:innerText='Fecha contable' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAYCAYAAACY5PEcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN2SURBVGhD7ZbvZ+RAGMfvr10lSlRYjWqOWKIvekSJJVajbl805fbF5mj7Yjn7Jn2xVLg9KpzS7YutI85SS31vJjOTZvOr6dHmjnwZNnlmnh+fzDw7H9Dq3dVCb0At9AbUQm9ALfQG1EJvQG8IfQar00Fn38OCv/k/tYC3T+roWKSiAs0sYutAG9evMoE+61PH+WEVRqqjfxs6q1eDd89flOrNocvQj2zYg+cx+cknvFot9DJloJck8RQhODOgSHSOBLk3RLAStiX8Yw3SFrMppocwtnHoexYcU4FEf28bGIXreBkefDg9mb3fWJfX8sqBtk3ndSB1TXg3fGIcW4ec5OXAf2AmAUM9cmB2Jbb2o4v5o6j1ecSnuTQfAd2A2Rd1aBgKAFno61tM+pzHlgTVnGDxxExCGegq3B8RooiP3wzQYqzFjils9+wQKnV4MEFEbPMTObaplgfvMwFAkzrysRbQ6ekZpGy6h2VSiAbnm48pscX+T+ZxvA19d9g68vG88RD6Dvm9ZcIn8ERsxUjlteNgTovkMDqSBmvsYUiA0mf96xJR6GNo0PgKrHMf4a+qfISNxfHGFovDc9iETqruCx4u3AGrOVtXdU+PW8Mcjkx+yw4C/sV8i9oNTKIANk1gb0TmUZET8YW0peMpbnPtZYHRHl1XcEwfpzDp3PiDbCoY0DUqRnfsOboekbbnYHrLY3ddhMyE8FSJ87avyUN2B96NoNIYfRa98mRv5JNvL6VxogkMuq53EW/IpGbCLo29xk4XOzY7aMJVfTsPPZ386saDucuOfTIK/JTDKYidBpCFfu9Bo/NLoJfnk4cuTn7cltJxRIzc2NxoNXo63+k7NmYPqQ8SrbB+yu70NRaBD/8qJF+6Cjr32aU+Ux+2AHp2p6/vAuKftoRX7vRK6FX5/MVON8i6hBNnxZbGqvVHGp6qsWO5Z8O7JP3R1KCQ5OlfyYs9vRA6ByYbcEkPvRgw/0XQ6/b0pNdmenoZdAFOPbAxuvYr8hF51+npK0xNNlf95OLi0oVlKNBFDly1oFNn4diEKm4QOzqcK959X7q9FEInHoMhv5HQNRaMeKc979q06t1e6O0kf3spg477CQ4Vtk4/X1bkw/Mmce3kFlZxe8nmtJvKlyuB3ur91EJvQC30BtRCb0At9AbUQm9ALfQG1EJ/dwF/AOmKSKi/x8U9AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Plazos de pago'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Text="[str_PlazoPago]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="831, 454, 128, 23" ElementType="InputBox" FriendlyName="'09/09/2022'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl id='o_field_input_323' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='o_field_input_323' type='text' tag='INPUT' class='o_datepicker_input o_input datetimepicker-input' aaname='' /&gt;" Guid="b288471d-2ac1-4eae-ba39-44b0b8a1fc6e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAbCAYAAAC9dCcxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANQSURBVGhD7Zixa9tAFMb1Z9wqyBLI4GzWGEOGeIshQwUZgiEQTIdiMgTTJYgMwZMRHYrpUFCGgjsY3KHgLgZnSJCHgD0EnCGDhwweMmj8eidd4jv5HKetlsbvB4I7P+kz3Pvu3ZMsEIQCGYLQIEMQGmQIQoMMQWiQIQgNMgShQYYgNBYYIkLYcLHOLFiWDefAR/goQ5xprw53g/EYw/o7HpvKgMptE8WDFpJQxnqPQwTHRdgW12PrKB53MI5vSogGvtSzYOfL8AeRjPDYKEB1x45jbKOIalt5conuKmA0RPSrBpb30I9Xf4r+qQN20uVp5YjEMBfBXRIbfnbB9gJMxFQhPN9E9WeSiGz1pugcMZQ+DfmIE40R7DM4jaGY8XkXNebA6yWumvY8OKyGrnj0oYMKK8G/SWLRbQCX3+vfiNkS3RXBaIj+qYXSV2Vv3AUoMQ8hH06+ubA+9pPfY/qoWS5aWgb78NZkEsQsU70Q/nYVHSU+uSjBOpUalx6s3UDZ2TyxuwzeFR9e+Sh86ChmmyDYs+BdivES3RXBYIgJWvsWaj05FdzzBFp8h/NhvEhaAtVFTRAVwTkX6RZkrZcmQvfYRqWd7Pp5g83rPfPYRXWtgs6DnGvouv877XYbh4eHxkvEnjAaYm4BlQTqJT7C5AdPFj9zZ/dP0ToooHkrp5nr6YwvXNj7s4owv6sXGUIcCTbcC3OXkNZ9C5hMoZpB8McVQjBuV1FcSxovt9FELVdCcC+DDy2Ud5rKQmatN2PcrqCwxXWUBvV1FWKMzvsCCmf9pI9JYdJ9K6imSJtBYOwhwjPeXKlnPt/FBXnmzyF2eK7+HBt/KaL8XS+zWesJ4mZRNKrppF15YKkeorkte4iYpKl1eBUxmWGh7opgNITprWDTsIDTUQu1LfWcDVHP8TM5lb/M9XjjuDBppreMHL83/rPoRTO8qLsiGA0hFi5slOGIMi6+Gxw1MVQXKS75/Pe9Cny58DGDOpyn10mNLPWSI0B8R9Cv2TEjvkOU88m3BjtfQXMkFeL/MTwbv+Yu110FFhjib+Bd+YmD+kBO/5ms9YjXkKEhiLcAGYLQIEMQGmQIQoMMQWg8G+L6+pquFb6eoApBaJAhCA0yBKEA/AZZzCic4Vc1FAAAAABJRU5ErkJggg==" InformativeScreenshot="445240a17c82abcd66aa01d0c54d7ce5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 454, 89, 20" ElementType="Text" FriendlyName="'Plazos de pago'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='o_form_label' aaname='Plazos de pago' check:innerText='Plazos de pago' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAYCAYAAACY5PEcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP7SURBVGhD7VdNa9tKFO2vNQZREEZQakpdEAFReA6IgAiYUFPqQuVFFlYWLiSPkC6UhSEImsVDG0NcHi4FUQTFYE7vnQ95JKeqW0pdqA5c8GhG9+PMnaPxAzT47WhI3wMa0veAhvQ9oCF9D2hI3wN2J/1DhF6rhdbxTD34Q/Cn5lWDgvTZMSXOyRdmwT4YIv6oFjSk/zJUSLfhHg0wOCHze7C4mLaP+AstaEj/ZaiQ3kP0QT0gpK8d0fUB11MpLv8vgv/YkqeibaH3IsZybayrmPBBWF4P4Xbke1bHxfB6KScIwucj5dOiBniVIFdzJhbnPhyL1rQd9F8G6PJ6Tfo6QzL25Lw4rSMk9zhZTHoijnuofVENRbwc6cRH9yH7IHvYK+WZ3YzQE3MWHL9f3vT1EvELF3YR31ALhW+Tvlpi+pyftTC4obFJ+nqGoE2/bR+n1zGiI1us884z4MsCCT2L2c4HkpC2h4tP5OP9EDaPHQ+jcYj+E/ZvY/ieA95iaNO44yMyfPb/JZ8m5qH0SRs2mkQIhA8yVbQmk8kOx310Oc/nF6h4Kda1nvQRFn5sao4VkRFIH/4p1UGN0OE5qoGdfLqAxz6tHgJ6b3Qg89Txb1/KseMZ8TtD3HJDKtRoujTrIMLC7GC9oybSEA7PnSTqASNHHHACXIjsn+SEfToIUzGsvJdgIBL0MU2XyD/nyLIMOUubgeWZK/Ly3xE5jLtTo9PVxtlDJKrIOOCYijADmnR9Au+vQSJ9I088N5+O775VDku8qBoehShKNN7V+Lamj6dI0gyqtC3STZkozNiQhUrOpiK0j20JoxPD7z2ljaVRnuhjK805jJBWpGGLrFJeyt+WlWWTUeunJBEb47U7xVf1CKhT05sUT+o1vQTTeUZHjH97EeY5UVrZENxFcHnHn57KU6JQ2+kr3dkrrD7PMXulOupso6WMnTq9M8DsYyb8ScuxMvJg1HV6du6JOe9sDi7PXKvj9y9VN5Rq/6lO35H0/4lU/v04wPT6CuE/hq6tqXChgRa8sdJ2suSOsjc13dBRoelaK90Rrm4SxIp08Z0w8R1NT990xdg+GCB6S5pLtzCH5qrfUk3kVi60/5rY7vEU8SV9e0Q9aoOqmu5JUnV8U9OjCX3keW29pu9IOmFzg6Cv/rEv5/wrrPS6iunjVZKlyq3gvttLVulQxvJdsIlNt4dNpzPKN4/qDUlDk+4dbXx541RuznqBC9+RV2bKMaCN47X6dG1kkOIf0k3JjF+RJutZze3lb8OWvPwAsjnJjvpdyFKx6d9HQ/qPkr5KhHw6hyGuLitXzR3RkP4TnV73B28X/LWk7xMN6XtAQ/oe0JC+BzSk/3YAXwEfYkPdS+oojwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:Comment DisplayName="Comentario" sap:VirtualizedContainerService.HintSize="376,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Validar tipo de factura" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Número de Documento'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="d5657e34-a556-43db-b002-611e72684036" Text="[str_FacturaNro]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="673, 538, 287, 24" ElementType="InputBox" FriendlyName="'INPUT o_field_input_214'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='o_field_char o_field_widget o_input o_required_modifier' aaname='Número de Documento' /&gt;" Guid="f0473399-ae28-42f9-ae74-8ae935022b00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASMAAAAcCAYAAAAqe9nhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVHhe7ddBCcBAEATBqF3/Dja/cApy/aiCsdAwzwIEiBGQIEZAghgBCWIEJIgRkCBGQIIYAQliBCSIEZAgRkCCGAEJYgQkiBGQIEZAghgBCWIEJIgRkCBGQIIYAQliBCSIEZAgRkCCGAEJX4xmxszs153EyMyu7eSmAQliBATsvuxQ1kPKdrpXAAAAAElFTkSuQmCC" InformativeScreenshot="3881efd7ec1e88847ea4cc37c68f0c2d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="523, 538, 134, 20" ElementType="Text" FriendlyName="'Número de Documento'" FullSelectorArgument="&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='o_form_label o_required_modifier' aaname='Número de Documento' check:innerText='Número de Documento' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIoAAAAYCAYAAAAlKWUsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATrSURBVGhD7VjfSyNJEL6/NghBGGRAHJaNMAiDcFkYDoZACA6LedjxwYWMsFlwXtyHyCFIYD1Y8hKIskQO5iEggnxX1T+S+aWO0Yfdoz9omO5KV1VXfd1dnT9gYFADhigGtWCIYlALhigGtWCIYlALhigGtbA2Ua4HLhoNC/63uRr5FXGN+H2D/AxwoUYM1sOSKBcdDmgDzqeJGmFcIKCxxvuYQp7B7RmCHQvuIDf6C2JNotzEaPG6dWvSWjtDTBZK/ptD5rqF+EYN1ECJKKzgeKYGHyPKb4NXEmXHQ7fXRddvocn9LdLzPyDLGxGFmquJkSfK9aAl5IGO+kUg+i0+WdS3E4Twt5viu+nFuPonRtuWerl//aDm3k+RdCgBGyTbaMLxEyVTNt8F6HqkxwpxRaPz8xDultK75SI8f+TKmyVL+/aHEME7tr0iSnoZwdP+kZ7+uCLzmiidFb3mJ3zV0vqOpnJgMUHsOxn/49yJw/62Ntk22dn2Ef9gYZm42aTp+LYP+mpuE/bBCFPW1dT9C2gz99MEwa5cS2PTgX+qtrPOxV+ZXOxGuLrT9lZN5PJhjtGBC0vZsPZCjG6lKo0CURwEgXTWO0159MVEaTRbCAYxQteq7Eu992RP9p0gQtQjJ+nb+siUUDa5bdqU7ATz76GQN2wP/aMIbZF8C+F34UUGU0Q7UuYexogDR+rRidEEYIJoPRsekn/F5BUqiII0gcdjIhYpkn3W20Srs/K/sZ+QhKD9JbLHgz4RnL43fIzu6hFFrJNi5ou1FPtq3XcUJ4v6G5QzWkt3j+OpZIVc9IWsAfdkjnQyQt9jPTaCLyNMaO1XH6Xc9vqIjtpwmPxbtEH1piYUiEIOzyYy2FaA0eLlRBHfGZnzOd8Xch30vaEMLGk/5qSJ00PZ3O5johwd96hPC4t0+TSJYPNvemM1oPAzhsvj/hlRkaH0qsTIgFAw9bRz6ZMkbwZVRNF+cSxKdu5x5rMdF/FP7a+zvMLTy2O6wkKcTesRRcd32T8v9Emennri2/2qfJ8dw6G+2GzFXCiZXk/WJnmLLhNjO8IyvJ9sMb97qQYIZaLwZLUjLLqffTbwCqJU9nUiSo0DmCenmJpbGKP8G4FSgvOJkXrKbemjxnMnSoU8G5uyvxprEqWir79LjX0qxr7gb96/ilgW5xOqiUI7ZNyTx5Fob00UHXSuWdIU6bIt+FIqOf7WJ0r3bzqCM3YXdHfnUEWEz3LtokZ54YlyPxtjdM7H/NsRRZ8o3gldhJm1pAvyqBj7J4nymhOFsRjJO5AN6KQpB/Td66ki9cVEoXJMBpYC/yHC8GuEwLPVc7uC4dkahe5cWaCuUaMQwcQRTDVKdzBEfOijtU2yYj2rA/voqydbo5Cdw7o1Cq1OxJlrM57nweYkrUEULM7gi0LaQftoiOFRQEU6EZXJ+QxRNBGc/S6OL9NcjRIPgpo1iiYKYfHNFwqWSXu4RuLbMmibLfQP2iuHXkQUQq7Spqp8R78Mqq+V7KuHbT/66uH/eJaVvo+2IM5qBy9+cFGo9PD/I/SqmGcCIqADq1vV/yjZVw+/Rmq9egiZV1lzt4/wT/7NGkRh3I4QUqEq8pF9eT1DFNwky5eo+4XiWMzF7hOvHgODp2CIYlALhigGtWCIYlALhigGtWCIYlALhigGtWCIYlADwH8YxuVAnLAL/QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAs5JREFUOE99U0toE1EUfUmLv9YWbaErhbbYqf2g4kbd6VZ0I0FQYjIvEjuTpplx0dKi6cSFuhBREUSpuC8oSE2guFDpx4QmmZmEEGMWQQQX/WhaxYXajOdOp8WVFw68d3LvufeeN2FcjgQCsrIMmH5ZOcw2wmUYhtc0zWLOMKbz+XwnkZaH1VV5zxiwBLyreoV2hsKlQEi1CFxWnnk8nrpisdhiGkYJsGzo+k0S+HqpY3+V91YBC6h9E3timEDJbAmElIxHVXeWk8kmFKYdgXVd10dJ4Mfl9rZV3vPFEVhfFXtV5g8O9nNZnUBxDiLVgKScpmQzkzmGFSawQqwwP7+XOAurrfm7z6D4RZUfvP3pQv8e4pmmae5gMLiLS5GzPKROkahdYFluwGUn/ROWxuoh5nauzJVOp5vRrYEu/MrVQ1hrRhxQJAgKXq/X5jeDBFOpVEu5XN5uE3D7PPbMAe9xPgLKhXUUrFPDNCsweQYTdVPu5ORkHfwYzpnmB+d19jFD1wuOWRbIxzS2f1AlX9Ycc2s43yeBfDLZhrwVJ7+GhiMMo7/dJCBwi0a8GA43oXvKEcDrqHMeTdtGq6LoI+Wj8W88r4+ZCwsCCh/ghxjtRp0ofNLQUTGkPIUfJrDM5aGTxGez2eNGNvsIxUqlUtlhJ/8vPLLcyAci5wKyGveF1F6H/ifwhF3aVGvHyOtm3LaejLwoFAqNm11EeeiEKKtzXFKDvmC40+/3b3Q/EE2EhWhiURhPVAQtcYo48gGjStj1MzyaB/pAuwKhyDV48gv4jg9uFmIdTIjGF7vHExah63r8OdPe1JdKpVYU22bZhhnGXRImX2DoT8fcmhhSYwyFGVsgmqhhgntMs9zm9HQDXJ513P6Ty+VUErBfR1byjsA6l5Qw6xx71dcVjT9E8Y32sZdtlEiBsQV0vgMM4rz1NdJfHt/FE1FSRjkf3v0XsfPVdOm2ndQAAAAASUVORK5CYII=" InformativeScreenshot="2e3ece6fa4db20cfe266ac42c80496b1.png" Selector="&lt;html app='chrome.exe' title='Facturas - Odoo' /&gt;" Url="http://go-dev.nybblegroup.com/web#action=281&amp;model=account.move&amp;view_type=list&amp;cids=1&amp;menu_id=263" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

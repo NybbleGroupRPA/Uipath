@@ -1,0 +1,371 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Odoo_MiscDetalle" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="data_detalle" Type="InArgument(njl:JArray)" />
+  </x:Members>
+  <this:Odoo_MiscDetalle.data_detalle>
+    <InArgument x:TypeArguments="njl:JArray" />
+  </this:Odoo_MiscDetalle.data_detalle>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>888,4834</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Odoo_MiscDetalle_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Odoo_MiscDetalle" sap:VirtualizedContainerService.HintSize="632,4769" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="indx" />
+      <Variable x:TypeArguments="x:String" Default="3" Name="str_row" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="[indx]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="590,3376" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[data_detalle]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JToken">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="njl:JToken" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="554,3252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Utilizar Navegador Chrome: Nuevo - Odoo" sap:VirtualizedContainerService.HintSize="512,3160" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="885dc8aa-0085-4840-81e3-b8fe42c94f35" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="478,2944" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="str_producto" />
+                      <Variable x:TypeArguments="x:String" Name="str_descuento" />
+                      <Variable x:TypeArguments="x:String" Name="str_precio" />
+                      <Variable x:TypeArguments="x:String" Name="str_cantidad" />
+                      <Variable x:TypeArguments="x:String" Name="str_preciouni" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str_row]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[(indx+2).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="436,86" sap2010:WorkflowViewState.IdRef="Activate_1">
+                      <ui:Activate.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="76311cf3-a2d5-43d6-930f-0739490cabaf">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Activate.Target>
+                    </ui:Activate>
+                    <uix:NClick ClickType="Single" DelayAfter="2" DisplayName="Clic 'Agregar registro'" sap:VirtualizedContainerService.HintSize="436,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="885dc8aa-0085-4840-81e3-b8fe42c94f35" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="62, 464, 93, 15" ElementType="Text" FriendlyName="'Agregar registro'" FullSelectorArgument="&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Agregar registro' check:innerText='Agregar registro' /&gt;" Guid="39e5b01c-5eaf-4ea8-8fde-10b43466e3cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAATCAYAAACA7GNpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASnSURBVFhH7ZfPTyJJFMf7z+A6R28evc7Ro0evHrmtR4+ERGFQDCHKwoHMdiYkgyGTZWDimnHMhiUT084GDdk4rGTHtJNR2zVkewWR5LuvfjRUQ6PLZkYOy+ET7XpV1e+9b73XhXZzc4MJ40VrNpuYMF60VquFCeNFu729xYTxorXbbUzo5wanxzVctLxsXx/t7u4OLm4rCK8GsbD7xT3+f+LPX/BdKILYRw+bCxM/bAQROPCy/XsGRPjrfRq+9Qiexn5Erc82oZ+vJEKn00GPc2S/D2KxXEVyfQXhI9XWgX1cxOJ6ENpyEFOJHMLpIOa2z8h2Bp2c8W/lMBdyxuT8mJj/JJZG/lTu1T5H6WUcT2hcC0WxmNMxt6yjJN9jGRnMP/NYZxZpXgrhV2xtHLopxyWlDL37RVb4mDngY0N9INh7mL/MNqtnsRSnhH5gtgME1P2/7COcWIHP8Xfvk/RFrOWw93n5J2OdYu8JrdB7dlFryn0lbhEudrEQSmPn7w5qhSh8MhBO+5C3Kf9bkeBOvYj5bsKFCL5EHsZnCxatZ3v5qaQDhkX2Fsy3KfhiedRorfVuE1osC+OK7WtR8iIUiBShnsdsiAKot/i6WiEObaMIk9lk4POvqzCvGrDbNMbGJUwEbY0S/Qf50KD19/jAY12OIlxhNiaIjhnae1AEC/kUxVk44fNE3FEk68wm4hZrCA//jFyE8lJEjeWkeYa8HsE05dVm8yUuEXji9bKYwJMhBOH2Sga+VUpcd75wQBVhyXBsHQqYkvdc7sVxAqNqS5CYeyJ4zge9J0KzAeva7tlOWWDSxoOk//uS78Ar4Q2dUvk83AdpS+3Cctm8RLCxowcxQyf46EL4ZV9bsPlp9hJB9e8QAToEyd+dZ4KLr+SV6IkgT/rSeycB4gUL787FM0uUcyIVuypC1xnC3KYgWZn2EagMznWJ0GngaDuNWdmOBH0iOOv64CLIVsgY7oO0qZU+VASCTvDOqxTmKD+8HW0fS2GHiODaU9lnyFhPBEoE73n9OOVbzWJ6Xf7PeUAEdtJe7Hefe4jyXiwrp10RwWYXA2pVpUvWjsimBjaqCEN9oPazRy1xoEq8RGjBVlvfZRlLJAYT8mERhlXCJvKsFcsxKYIouemtw95kBu+psv+1qwiv3f9NUEXomD/x3hn+VbadywPEMtQbqYxZAliivb4JPDkbJDbvoRaM13E6HP9NhPt8cGJ7+JtwgiR92LtxX+0PiOAvNYTNwz/3N8HCDsXabfkSIQJXp79sBMbWSk+c+m73pjGVSMFPt5ChIhDqzcT3LI6wIVsbJd6gG4S4MVB5p1nbkM63P9HHK9q9OQUKWQpM9tBRRSCG+kBYlVz3FjarU7uhv4MiEKdlBJTbkb9w2E2iSZcMFofvJeXIy7+Rb0cP4fogisSrH+ORUPdi7ShOp0W1PwaueFjio9CVK+xjMYIIx4jF4kj+ppRviHrbhdfc+7HLKTzVf4bJTkTzBDrdlmZyVc+534zrMv2eoOvsZ3kVfkNtb41apEuYx2GkSnD98FndROxI9sJR8SrRMQSv/iic6vsh95iM1o4mfBMmIoydDv4BvvRg8kWnhmYAAAAASUVORK5CYII=" InformativeScreenshot="fe14616dad8875a4b943436472532f73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <Assign sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str_producto]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[item("producto").ToString.Replace("[", "").Replace("]", " ")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Producto'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,216" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="885dc8aa-0085-4840-81e3-b8fe42c94f35" Text="Servicio externo" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="62, 569, 83, 20" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl parentid='o_field_input_348' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' /&gt;&quot;, str_row)]" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_348' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='o_input ui-autocomplete-input' aaname='' /&gt;" Guid="f6fbd43e-d74c-406f-9132-a920fdba41f0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAYCAYAAABdlmuNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVFhH7dQxDgAhCABBX8sD+SCGwsZLzu3ZSWgsN+AqIYaCDAUZCjIUZCjIUJChIENBhoLGhcrMiojP9PufkRt1x3pFamNP78QikZp/FGQoyFCQoSBDQYaCDAUZCjIUZCjIUEjVBkqAkEmfcvOTAAAAAElFTkSuQmCC" InformativeScreenshot="1c9419defe0fc77c5011c61903974fc6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="58, 430, 92, 29" FriendlyName="'Producto'" FullSelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Producto' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Producto' type='' tag='TH' class='o_column_sortable' check:text='Producto' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAhCAYAAAAmnK7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVGhD7ZbNa+JAGIf9a0MhLIQSWBCpC1KQHlyQQiiEohQtrML2YA7tYfeysKQHoeTgKXvoQRHLQhChCOW3M5kJGq1R6ceb3X0feNFkPpx5H+ejAIYUFkAMCyCGBRDDAohhAcSwAGJYADEsgBgWQAydgL4DwzBQ7g31i/+TjQL6Z0acoEWYsI6b8B90hZfySgLUOMvwRvrFX8YWARYqpy7ccxH1Mkwp4qAO/1FXegksIGaLgPTEwks7TprTFw86gUXHRfWDAetiADxN4DcqsEzZdnXFzBC0hMQDUWaW0W7U4vZKQB+OlHvkQekYwjuSfTiiRBD3q9uKfu26h3CWjHER8bgyx5A/dhcwn+DmRE3UvRPPWoAM07ZR+zbB4MKKn+1qG51uDUWZsMMmBk+i+c+6ql9y4PXaqByqtrsISPotOh68lkiurHvq4yH00a7Kejacax/h70Xd58aQR/Y4A1SYxyJJcjJagH0ZqgYI4MrJfuwgeRN+UStGCgvOZXsbnaTwdnkLyhKg+y1d6bIIwVexJTZ+4F48pf8o2WPII7ufAd0bBGGEuS5f38NXkyhYqrO2olLtswQ80+8S6X6zx5BH9joDUqxN7L1WwBzDwId/G4q1sDrOf24F7CMgvf96PWePMyBJuFhxLbHPn+kb15YzQK7GJMHFExdXd1HmGPLIqwpI30DEefEpfQsKu1V9C7JR/1xJtZ8FbZTFbUrdcppwSvK7ErDpFhQz+o6arX6vcj3ZMob8sVEA8z6wAGJYADEsgBgWQAwLIIYFEMMCiGEBxLAAYgq/7ofgoIvCaDSCjCiK4k+Ot4/lXBfG4zFkTKfT+JPj7WOR6zH+AIVuev7KQvMQAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey Enter to add next item" sap:VirtualizedContainerService.HintSize="436,136" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f29b6ba7-d490-48f7-8830-7082e039d730">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Descripción'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436,253" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="885dc8aa-0085-4840-81e3-b8fe42c94f35" Text="[str_producto]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="154, 569, 83, 59" FriendlyName="'TEXTAREA'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='TEXTAREA' /&gt;&quot;, str_row)]" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl type='text' tag='TEXTAREA' class='o_field_text o_field_widget o_input' aaname='' /&gt;" Guid="b40d2303-92c7-46d8-910a-a35819faea2e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAYCAYAAACPxmHVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABISURBVGhD7dAxAQAADMOg+TfdqeALEriFKRcqFyoXKhcqFyoXKhcqFyoXKhcqFyoXKhcqFyoXKhcqFyoXKhcqFyoXKhcql9keD6WBQWrmUKkAAAAASUVORK5CYII=" InformativeScreenshot="7673758565efddf86922eec512191d9a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="150, 430, 92, 29" FriendlyName="'Descripción'" FullSelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Descripción' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Descripción' type='' tag='TH' class='o_section_and_note_text_cell o_column_sortable' check:text='Descripción' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAhCAYAAAAmnK7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOeSURBVGhD7Zjxa9pAFMf9a0MhFKQERCnNIBTCfuggDEJBpGHUH+Zg/mAG84cKw/0QGUJxtLCS/SA0IpaCiFCE8t27y6WN1tXqrNeV+8LDeGfu3t3nvXfXZrAmtX/+Ek9Ky2htAKL+FYegbDlbGwCl1aQASJYCIFkKgGQpAJKlAEiWAiBZCoBkvWwAvTrsnAH7ayQaVtEEnQ8mjD0PnRvRJDRuu8hqGqyPIcaibdP6C4AI/p4GjZyLTUd230X9YsNu9nxYWxqM43PRsIoIQCkLTT9A41o0Md2EqNpZGIdtaZvPtABAAXapiGLJgamz71m4bZnuvj4tAOCiLVrQp2hk2ZCvoCuahqcVKhE6zxJ9x0K5I+DcDhAcmdApenlf3kHjMu6a7tNhOD5C/lobLht/10XRpjGzHs4pA0zWRlF6158/gPNGzJlLjUsatDyY22JO6vNFxrYPWZsJv8e/Ynzhw8nHY2jbBTi1pAQlczjwHAM67zdROZvw3ufQ0wFgiMbb1EKSzWEb/6mCg1163rJ5mg9PbL4467iJ4FuZlxFtp4yQXjv/QOWA+gquD//Y4jVYex9QoRCLZ7ZtwHjXwGAeAMpCq5R6d88nb0lnXvydAPo1mnOHnrccBFT3pwBcN2Azf3QTLvld3I/9sU+GqTl0mIepOSwfAzbHM2gJANMLiTcyC68jOlvu3UIGXyz+bB230R2OMR4NMaRPqsYossXvVuNNI6idz1TijpqUVWLxOQJ1yzvvIacBJBtOozUd5o8Fvw+q8+y5gKrIiOFplUqnhyala9rvxDfnu4jqmyYcNi7f5Nk5IlRZYM3swzq1cgbEi3poZo1cv43QSFKYGUWb12IxNLvAtOb0PQpgemOnonxG6b6oZnKf3LuFpdf6EMC8QFynng7gshpvhjgDkgwo/hhQdLMIj21MKT9JIn4yxiCsw+HloEjxP5sBE0SdAEErJLzLAng8AyaXHRo3QEgl8V8yQDKAR25BYQUF5iydAcVaneol/SZHjlJ3Asep0Zaf0oHHALBDlV5beAYsAjBbn/frBI+0yhlQ81Gedwa8HACJzf87YOo2odPheBRgwOr3nFtQvSsibtEtaBEAut247JbExiXgzav4p0wr3YJ04+EtSD6Al6g5gF6BFADJUgAk6z8C8DqlAEiWAiBZCoBkKQCSpQBIlgIgWZnf3QjK5Fmm1+vx/2KyT2WbsfR+Z/r9PkajEdinss3Y/X738QeocNuJPPtY6gAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="436,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// analitics" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,304" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="Administration[k(enter)]">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c210feb-49df-4784-a353-d811e6d594ee" InformativeScreenshot="be97943dc4b1d9f557083a8842870dd1" Selector="[&quot;&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl parentname='analytic_tag_ids' tableRow='&quot;+(indx+2).ToString +&quot;' tag='INPUT' /&gt;&quot;]">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <Assign sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str_cantidad]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[item("cantidad").ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Cantidad'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436,216" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="885dc8aa-0085-4840-81e3-b8fe42c94f35" Text="[str_cantidad]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="429, 569, 84, 20" ElementType="Text" FriendlyName="'1,000'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl name='quantity' tableRow='{0}' tag='INPUT' /&gt;&quot;, str_row)]" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl name='quantity' type='text' tag='INPUT' class='o_field_float o_field_number o_field_widget o_input' aaname='' /&gt;" Guid="dea713b2-d185-4309-a5c5-2d5cfc6f8c40" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAYCAYAAAB+zTpYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHvSURBVGhD7ZaxS8NAFIfvz7i14FJw0K1ZCw4WHAy4BBykU+koDhK6lKODOEnHTMJ1KLgIXYR0KcShkG51EOrgkMGhg0PGn3fJ1bbWOnkO5n3T3b2UwHcvrz8Gwiok2DIk2DIk2DIk2DIk2DIk2DL/W/B7gulQ4rpRQ7kTmcNN0kkX3i4HYwylSh3dSWoqipcBzg9LWY3v1nB+PzMFTYr4xkOZM1UvwTnrIn43JcM/FhxBKCHNKwnZqoK1twhOQ/jcgRjNs+18JOBwH2HmeIbgkMO7NVJfJDxeQ/Ccb9OhD14RiLKfzhG1HfDLUGlfUogRkfTc7YIfBdixVCoXzCCPOcRYLV8lXOarq1oStRi8fpKv2wzuQr5GXYDLBWKz1RRecNL3wFqrtQTyhEE8quVYgK/JN1J7WnCCu1MGf5SfZ2QXojrabDUkeKO2Ilh394lUJ0tWBX8+t4AEb0Id/Av8OIM3JKo/tgMzg5M7eGszOEV4sZzBcYevz+DnAFWawZoUyTjE9E0vv0kRe6oLt6YIF/I1336XIvbVeyhFfJmfOgfXK3nWLVWaCJ6+5OCjMrjJweIhv4gcnYPrcHZMDm4EmBYnB/+Eysi8icGqK0sUUnA6uYbXidc+ZVsUtIP/DhJsGRJsGRJsGRJsGRJsFeADUD8KMyBbZiQAAAAASUVORK5CYII=" InformativeScreenshot="853fe220286fb196ba20dfd45b87e125.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="425, 430, 92, 29" FriendlyName="'Cantidad'" FullSelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Cantidad' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Cantidad' type='' tag='TH' class='o_column_sortable o_list_number_th' check:text='Cantidad' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAhCAYAAAAmnK7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMQSURBVGhD7ZjfaxpBEMf9aw/hCBzhQCIlF7gXCdTCUjgEESXUh/riQ7YPKcRSzINShHKlgQb7IESRC4UjCEEI387cj+hpSUwKWWL2C4N3N7unO5+dmU1y0FKq3ODHL2hTZzoDFEsDUCwNQLE0AMXSABRLA1AsDUCxNADF2mIAc/hHDuz9Bvyb5NGyJhKOYcCoDJIHm2oMuU/zDA+PnfkvKQEQ9Jso7Zm0CFqIacGtnGA4S5xP1gAev29fUohYBKBm0fvL6PyJHmT1WgHMBh4sXviOA1GroiocmHzvpoF7qlYBPKDXCWCE1h7/eBcnS7vSr9NONSw0ftLNbYBe3YVl8jgDZkFAXsTpMT52omelWgPODvtN2KJDIUmCf2dxcAYVvnYgJ9F0jE8FbH5v3kb5yEORxyYAZhcSIs3KvAmn3kNwG7mAyw5EIfbZ7xrw3iy+43/1vABuuhC8wNVdejNDGIYIZ/O7IDv1Lnpfm3DzNN5q4JyGpT7DLqF5LJNAGKh+DzHkssa+goeT/hAhjc8AGLXigO+6mbkRgFsCGH2PQLvfg3zPG4JAn/Jb0k1DpfKDhPSK8bwXCSBN+03LBNXxruDFupDTBQAvXXnfi+6dY37beglaBhB8cqOx4mweOy/bmQzIaNiCzb6aD0wlXL4WXfo1rDHa25oBlABUC4aQogiTdySPjSwO4hoA6iebAlibu9IDgn4D7m5SglJj31qv2PIecH7E1zaq3wLMqQbfG8RHALg3A8JOXL5KEiPeBctB36oMIN2dgqiOe3QK8g7txSmIAu7XeHEWSh+pB3yuohhlwiYAhmgVeGyRmnQbPpXvjXtAGuQ97h9dtN7GPSDe9dvUAxJl0n3174CZj+ZB7OMTkHcYZ0Rr+BAA8n8pw2Zgecow6hkZAKTgzEtOQXTKEeVMD1ickMhXEXEGpLv+qgsvOQWZBwLlCMgLBqC1kAagWBqAYmkAiqUBKJYGoFgagGJpAIqlASiWBqBYud+jMbSps9xkMon+Fcyf2p7HluOdm06nuL6+Bn9qex5bxHuKv2zvNoa4iguEAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <Assign sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str_preciouni]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[item("precio_unitario").ToString.Replace("$","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Precio'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="885dc8aa-0085-4840-81e3-b8fe42c94f35" Text="[str_preciouni]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="612, 569, 84, 20" FriendlyName="'0,00'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl name='price_unit' tableRow='{0}' tag='INPUT' /&gt;&quot;, str_row)]" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl name='price_unit' type='text' tag='INPUT' class='o_field_float o_field_number o_field_widget o_input' aaname='' /&gt;" Guid="9f999eca-99da-4b28-ade0-4b0940b58201" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAYCAYAAAB+zTpYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVGhD7ZVLaxpRGIbn1x6EUIQsCmlhNm6ybRZDIBS66UYhFmLATRRaRBcDUbrqGOPtRBPn4t3xBm9nph4zpsemLqY94iwehjPvO4gP33wjjUYjiEIikfCug8EA/X4f3W4XlmV5mKYJwzCg6/qaTqcjPNJkMoEouILH4zGGw6EnudfrrSXzBO+DZMm2bYgCE8ybYiZ43yRL0+kUosAT7E4xE7xtikVGms1mEAVXsLsqXMHummCCeVO8L6Kl+XwOUUgmk97kMsEv9zBPMg/eH/1fSIvFAqKQzWbRarW4a8KVzGCy/dJFRSjBxWIRuVxuY01sk+znpfC/xXhsoFLWoGkO5Qoaj8buvc4Dqncsu0P1obPxrLRcLiEKlFJkMhkUCgXvVWeT7BfNZPPgyd+K1UZNK6PeNr2z2a6jrNXQtnbp6WhWNNxTHZaTWTrFvVZBU39+XijBzWYT9XodqqoinU57H719RyjB/5Kn6xiIkvfdo0jJBIq6Q+/2AuT9Jaivr54TyFd0fT5YwfRKBjlXfff4gv/YUxUQORUK5hFOcND8JkdD/C3Bxa2v81qvnUKMKMjPWWbj6weC2PXT6nzIgsd5nEWiUAqWd7YKCqJRBerYzW3QUh6a8VqviviJI/RLFbaT2bVLxCIyUnT1Gw6HK9hhWPqM2PERCCE4Oj5F/MdwlW2ui+09h8YNzk5+ZeTNOyjfnqfX5aAFb2WuQomc4sbiZDsSCuZgf/8E+WPJe+15+S6EggMmFBwwoeCACQUHTCg4YELBgbLET8ZToCS+prj1AAAAAElFTkSuQmCC" InformativeScreenshot="747f02a3c0e7f96799b0c697d65eccb8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="608, 430, 92, 29" FriendlyName="'Precio'" FullSelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Precio' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Precio' type='' tag='TH' class='o_column_sortable o_list_number_th' check:text='Precio' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAhCAYAAAAmnK7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJYSURBVGhD7ZjBaxpBFIf9a5fAElhkThLiQQTx4EECS2CRLKEGqtAe3IuF5tLLelgoWyIUtocc7MEgLhIogvz63u4srSYUNLXDNu+Dh7PzZlaYzzczWIFglEr05SskzIVUgGFEgGFEgGFEgGFEgGFEgGFEgGFEgGFEwLPMMG4rqPaYWselVAKiSwuW9XvYcJo+wgc94K8xQ9Cg96s+phvddSRKKMBB48KD16Po1mGziJMuwh96UMkooYA6gu+6g0huVFYNbkQPkZu1a66H1qkF53oKbFLEwxaUXVRMH/FjPhebOcIrkniS51Q3QJLlqALOuc8Fv5aZT3w0qnb2frvagD+Z68zLKLeA9Zz2au6z4H2mZy0gWySl0Pk4x2xUz5554QfDDmq82O1bpDR8eu1kuZobIHjTgMNzL0KsdwXc+XlOtdAfDtA545wD/46TL6PkZ0AedjPAjPdqLUDdJPkETOE7NMbxEeu9PHR5Tgu3aQyPZZy91wctVco72tauPuF+R0Dc47bCoHhtMoDi7+7FuuNwyn0GDMeIk5R+sRotoD4q7i4RXC1pO7iKdO6c5OnRv9gW8HTr+9Pc/Sj9GbDFEwG6AqoeoocUaVrEI9ab3QqgjScOEU4SqgWpgGfZXwCt1dta1uc0PQQfAvTp5qQuI/BZe9AZMArgvu4zYD8BoKVORl3U6FbEua0bzIG3IOu0/jpvQf8jIsAwIsAwIsAwIsAwIsAwIsAwIsAwIsAwIsAwlW/3M0iYi8pisQAH/0tYtCWOH8V6V5bLJThWq1X2KfFvIl/vJX4CdYvWGIzpy9gAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <Assign sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[str_descuento]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[item("descuento").ToString.Replace("$","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Descuento'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436,216" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="HardwareEvents" ScopeIdentifier="885dc8aa-0085-4840-81e3-b8fe42c94f35" Text="[str_descuento]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="704, 569, 84, 20" ElementType="InputBox" FriendlyName="'0,00'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl name='discount' tableRow='{0}' tag='INPUT' /&gt;&quot;, str_row)]" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_340' tag='TABLE' /&gt;&lt;webctrl name='discount' type='text' tag='INPUT' class='o_field_float o_field_number o_field_widget o_input' aaname='' /&gt;" Guid="bd96843d-a410-419d-a800-e151772af04a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAYCAYAAAB+zTpYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF/SURBVGhD7ZYha8NAGIbvZ5ytHFRMtj9gooWJBmrOVlaWqVJTjqnJyqrBVRRmBjWDqEIqCqvbxKAVFRETlZHvLsmFLVt6jI1P5XtUvtyrnhxfXgGGFBZMDAsmhgUTw4KJYcHEsGBiai042c2gmhJCCDRaA8x2iTsp480dVhh1GtmZbHYxety7g5z6Ck5CjGUben3KxtNaoy3HCL879ub2mHck1L2TejBQsov5Wz6m1FfwRkP0jFVUsIfpSeitGwt8uaNBIMaI8oOMaCKglrGbaiw4XiqIyVc1MUxfQG/c6PDmthqyJN8KngoECxaMeBFATH8h2JdLb3ff2DefsGAH32BqfsixP6yrih3sy8UPUKUdnCC84R2cU9UOLjWirB0kiLchXt7TR1+uqkUEMMd8TKmvYEvabwetvMM2WkPMX4uOVl4X53OWtAdfX0C6Hqyf8g9RUGvB54mg5RCrsqs/wYIrSHZ3ULfPdlH8HxZMDAsmhgUTw4KJYcHEsGBSgA/37ykwvI2MfgAAAABJRU5ErkJggg==" InformativeScreenshot="9dbf546f0210dbe9c410cb0b076769a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="700, 430, 92, 29" FriendlyName="'Desc.%'" FullSelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Desc.%' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='o_field_input_287' tag='TABLE' /&gt;&lt;webctrl aaname='Desc.%' type='' tag='TH' class='o_column_sortable o_list_number_th' check:text='Desc.%' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAhCAYAAAAmnK7xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALJSURBVGhD7Zjfa9pQFMf9a6UQhCCCVEYzCAMZrIUwCAWRSTEPzR4cmD44WPZQGPoQKBm1TDKGsPQhIAYJlIB8d38kra52K5vz6no/cDAmVy+cz7nnXi1AIpSC9/kLZIgLuQIEIwUIRgoQjBQgGClAMFKAYKQAwUgBgpECBLO9AjwTxWLxLko11Nt9RPPs+QZIfAuaQubeU6CdDpFm99fJ1gtQdQONZgNmvcJF6A7CjUgI4RwUcfghRnploVKsw43J7cCG9tJFxAf9NVsvQOuG2Y0UflNl94xPWS2mY7jHGpQ9XqU1w72Vk4wcGFWFS1NU6G0fCX+0/KykoTVYlc4FAaNMwGSIVllF6zIbsgZ2SADhsgWVJu3YI29SeMdcSM20YTd19kw9GZJnJFEqGVc24Az6cF7zcYcfSQlPXNSpsLIOq+vAfEauizXYYzbDEsstyId3ombfvz52S8C1Ay0XEJNE0usXPdDOQCu2Q5Optkj6fTRYkg30ggjJLEEcx0hugOhMZ99rDtiHgG8ua3EdP18fq0kvGlD3bQRrbn+7uwJyGffCBF0frHpLd/crRw4CkuOwq7H3Jh30WBIPZllD58qH9Zy3LuXAwm+cPYodEpCgby7sAfkKqJNNmVQ3rXAeCdI0r/gU6WwMr82rXj+L7q+ASYA+aVP+94fOOAlrddq7ECH9bNXC8CaG++qn4vhDtl7Aw6egBOcGr+7akY3ee5uN0WlS8j6vWzi/8NHPBNTJhvrLPeC6B11RUHkb0Ak4Ywc6lUzmZPKIgGBO5n4qAm5j1e+AeYT+G7L50o2SjFH2yaY74n1h1SkoXnVCWjwFkbamEzmV0wUBiyQLLajagvdft6AnghQgGClAMFKAYKQAwUgBgpECBCMFCEYKEIwUIJjC13EIGeKiMJlMQIP+e5hfy/j3kee7MJ1OQWM2m7FXGZsJnu8pfgDj8NKBM84N3wAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Linea &quot;+(indx+1).ToString+&quot; cargada&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAs5JREFUOE99U0toE1EUfUmLv9YWbaErhbbYqf2g4kbd6VZ0I0FQYjIvEjuTpplx0dKi6cSFuhBREUSpuC8oSE2guFDpx4QmmZmEEGMWQQQX/WhaxYXajOdOp8WVFw68d3LvufeeN2FcjgQCsrIMmH5ZOcw2wmUYhtc0zWLOMKbz+XwnkZaH1VV5zxiwBLyreoV2hsKlQEi1CFxWnnk8nrpisdhiGkYJsGzo+k0S+HqpY3+V91YBC6h9E3timEDJbAmElIxHVXeWk8kmFKYdgXVd10dJ4Mfl9rZV3vPFEVhfFXtV5g8O9nNZnUBxDiLVgKScpmQzkzmGFSawQqwwP7+XOAurrfm7z6D4RZUfvP3pQv8e4pmmae5gMLiLS5GzPKROkahdYFluwGUn/ROWxuoh5nauzJVOp5vRrYEu/MrVQ1hrRhxQJAgKXq/X5jeDBFOpVEu5XN5uE3D7PPbMAe9xPgLKhXUUrFPDNCsweQYTdVPu5ORkHfwYzpnmB+d19jFD1wuOWRbIxzS2f1AlX9Ycc2s43yeBfDLZhrwVJ7+GhiMMo7/dJCBwi0a8GA43oXvKEcDrqHMeTdtGq6LoI+Wj8W88r4+ZCwsCCh/ghxjtRp0ofNLQUTGkPIUfJrDM5aGTxGez2eNGNvsIxUqlUtlhJ/8vPLLcyAci5wKyGveF1F6H/ifwhF3aVGvHyOtm3LaejLwoFAqNm11EeeiEKKtzXFKDvmC40+/3b3Q/EE2EhWhiURhPVAQtcYo48gGjStj1MzyaB/pAuwKhyDV48gv4jg9uFmIdTIjGF7vHExah63r8OdPe1JdKpVYU22bZhhnGXRImX2DoT8fcmhhSYwyFGVsgmqhhgntMs9zm9HQDXJ513P6Ty+VUErBfR1byjsA6l5Qw6xx71dcVjT9E8Y32sZdtlEiBsQV0vgMM4rz1NdJfHt/FE1FSRjkf3v0XsfPVdOm2ndQAAAAASUVORK5CYII=" InformativeScreenshot="73cc9f3646d701b45841610f1bc2813b.png" Selector="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" Url="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Nuevo - Odoo" sap:VirtualizedContainerService.HintSize="590,1261" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="618f2abf-af33-46d8-baff-d40919b5d7a8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1045" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="success" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="Activate_2">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b04bccae-9006-4582-b3f3-b41afe733628">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Guardar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="618f2abf-af33-46d8-baff-d40919b5d7a8" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="24, 202, 79, 31" ElementType="Button" FriendlyName="'Guardar'" FullSelectorArgument="&lt;webctrl aaname='             Guardar         ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='             Guardar         ' tag='BUTTON' type='button' class='btn btn-primary o_form_button_save' check:innerText='GUARDAR' /&gt;" Guid="22aa43cb-aa5f-4120-82a6-4a14b05cd0d0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAjCAYAAADokDbBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVGhD7ZbLThsxFIZ5lTxCX4FlHyHbLlmyzJZlllm06mzJAikrhCIhjQSoTWgQUS9kAAWNGLUkgwZ1xCVEUyX6a3ts4ziTSWC89JF+RT45PrY/28ezBmvGzMI0aBLm2uePVm+UsFmYzier18rCNCgL06AsTIOyMA3KwjQoC9OgLEyDsjANysI0qMIwd1xUBw+Ip7zzNIE/+IHyDv//MibOBO6x0sc5h0e88aCt+Ih+RSzF+LY76z++Ac0yY8kILc9FicWk+aRNJ4jjANV9JYfQojH0HNQmCbzrDt7NxOWoGMw6qncT0mOCYdjH1kkX2+EIY+Khk2ULXRlmHbU74qQ2jVATm0HFYfq+i/LBF2xdBPASGijy8ny3ZBNbXTh+iCGbVgynqeTJG0PNceCi0vPReqJJAO9yV4nLUSGYTR8+7XB3xk8IVR0OXTmZbJW2V4XZ7LNcwyjCkPz6V8oCOEzvkrepeukJS30Z+Xifcdh58eWNkZXjKGBxczdokQrBvKDT1Rapa0WY5WBEPCPsHbXh0lP36GNdxOswaWmJaNAErVPqywDh8DzPAcrclzvGXI4GNq4fiEeHnqNCMBmol0VuDtjd40aumIxZBvMQe8/EQRb+Qeahi+bxWTWT1EU/aM/UzEyYyQ02WXvJGDyHbnF0hvcy5xIVgsmLud+vs3Zpb5/Vm+otnegrYJ6GrM4Ofx+mbf2K8raomY1H0piq9TAHpjiZy8YQOXjNrEW0XurzXqJCMHkNQnyuXBex6xymLAUpcCa+ELH4qngUdPsXYkuJl9ecg3mBNw+z9G0W1tIx9BwL1parQjDJYyOudvw3QO1EfWk5zCaZJHtZH+D2Otj43uevJN/1nTN06WfV8w0q5ETQU8Fe0z+0vgHdHtkEHaazi+174pCnUz1VHdT013yVMTI2pBK+8nQWg0nVQOU6RkzH5RY/RdhuNWRM6Wsf3lgJSAjYn0323/pVWuTnPj/EybjvY30OJhE/neknWApCmvadudIYGTDl/+ShWqluFodpJWVhGpSFaVAWpkFZmAZlYRqUhWlQFqZBWZgGZWEa1EKYVm+SMAnTWnGzMI0Z8B8bKRkE6PfVZQAAAABJRU5ErkJggg==" InformativeScreenshot="4669a0cc497c975dc23f32fc6f352c78.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Proveedores'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="618f2abf-af33-46d8-baff-d40919b5d7a8" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#action=334&amp;model=account.journal&amp;view_type=kanban&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="449, 111, 92, 46" ElementType="Text" FriendlyName="'Proveedores'" FullSelectorArgument="&lt;webctrl aaname='                             Proveedores                        *' aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                             Proveedores                        *' aria-role='button' tag='A' type='' class='dropdown-toggle o-no-caret o_menu_header_lvl_1' check:innerText='Proveedores' /&gt;" Guid="16ae0e14-c5da-4b3e-ad37-52573b996b06" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAyCAYAAACj3t7EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOmSURBVHhe7ZnNaxpBGIf97/pH5NJrr54begl42UvBRnKINIRK2YNgSpOI5ENEMJDAElhQqmCCyiJWIR8sZAO/vjM7btRujCmSNzTvhAd2Z8aZnfeZL0hi76IDgY/El5/7EPhIpFY+QuBDBDAjApgRAcyIAGZEADMigBkRwIwIYEYEMCMCmBEBzIgAZkQAMyKAGRHAjAhg5g0IOMUAPtrbcWX8/IMANaCZdO/jpl5DIRlXn5v/VMDg+CEvu3EKzwd8d2+i3mvhDQhQHLhkoHuK1HaLhnsNr0Xv44End+Beqvcw+f0Gyqvqd3k0R8Cothm1s+tcA56DHD1nsg4GV+ZHtMq8/a2onv2jhdG4SX+IZs4yZRaKtT6Ce1N02cfNhIDZNkdOCVnTptOl+l4PozsqU2OZ149VQbsfmAIqatVgm3aew5JWQA3eLRDUS0YAfdCvGorr35BLWjhp04detVBdo49f3UHdo3caoApy4YwC3nf1c2rFDoVUSUiyAo8C4bsqQBYKpR4CDOGmqN5Gg4IaYFCxkVlJo6ik+RcoqzZ0/yRrNyzbrZCMaCKM2zyi76Lv/urqYA+OwwmgBOBuiPp3GwUrPbefkzbVpYmitt1MmqRSO/q79TgWZ0lnAA3x0kFRnQE6ABSo6DxQ9QN08uN3Qg+MBqqCmaIgjJ/Xw3wd5MO+Hmw16ncPbZKsxBfPSXEkTfGwzcwr+7tNs+JMfb0CJrbReW2V62pS9eB839IrKGvZyKsJFtVdjKVtQRFaQB9OlDcRgNi8TbheOHtytaFeGRlV55iCFZP8851wu4tJg8OJrTCuL9XmbQsHUdl03qyAef2kkjZOnD58tV1RiibguN0FeSEBcSvgGs318D1XpcB7DTQpFt6+mUVqts4Gy6BnJi1/LSqu7LkrYNRAgZ5jV0BsPxZyn23Y+hyjLWjtCB1anWpyTNd7mhcQMHsG5OF26d0ctLpOktpUh+Z9D2fjWZSivLsAN064X6tBNrs9uGkqU32oQ/kwHy5/dQvrtlD+ZMrob6EzYGN6754V8Hg/4aoN2ubqvVp6zQKIR29BYyycqUOtXZnIm72xBBi5leimMXU7oSANKjtmptItiILum1tQ0L3A4PZhC3zyFjRzlX60H6uGzm+aSCb5XRcHL7MFCctEBDAjApgRAcyIAGZEADMigBkRwIwIYEYEMCMCmBEBzIgAZkQAMyKAGRHAjAhgRgQwk/jw7j0EPhLmX5qSmJIIYE3AH65cvGj7IKw2AAAAAElFTkSuQmCC" InformativeScreenshot="2db8c284b1caded2bb0ac733e126f0c2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resumen Contable - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Facturas'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="618f2abf-af33-46d8-baff-d40919b5d7a8" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#action=334&amp;model=account.journal&amp;view_type=kanban&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="470, 169, 50, 15" ElementType="Text" FriendlyName="'Facturas'" FullSelectorArgument="&lt;webctrl aaname='Facturas' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Facturas' type='' tag='SPAN' class='' check:innerText='Facturas' /&gt;" Guid="bd1b2bc7-d196-42d2-a48d-332daf6bd1ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAATCAYAAADbJP5YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJcSURBVFhH7ZTbq6FhFMbnr0UUieQYbmTnAuUUKeJKSVLKDbnYlCKlJOWQXHCByCEbe03PyqdvD03MTFN2nvqKd72H9Xuf9a4f9E31Ans2vcCeTRewxWJBer2eJBLJl+/t7Y12u9151mPCOqyv1+vnkf+nK7B/mcRTgLXbbbJYLOyiVqulZrN5jhANh0OyWq0klUo51mg0qNfrkUqlujgfDoep3++TzWbjsyAxuPA7Go2SWq2mXC7HY8lkkuRyOclkMgqFQrTZbHgt9vD7/TyOeCqVosPhwDHoLrDpdEpGo5Gq1SqdTid6f38ns9lM8/mcZrMZ2e12KpVKHOt0OhwbjUZXjt0D5nQ6aTwe8/90Ok0ul4vW6zV/iAEYSiQSFIlEaL/f02Qy4UuvVCocg377xnDjSAY3sVqtOHEIMHAIMTiHhLbbLceOxyO7C+g/AavVahyD4A7GBWWzWXYeArTD4eALRF6/zr3Lsc/PT3ZLp9NdQRcKBU5IvKkgceLQPWDi8zEvEAhwqQnnCmBwCmcbDAZSKBRcsg+DdbtdLkW8G0BiLhK85RjicPfj4+OvwOB8MBj8kjDKEGDiM6Dlcsllms/n+T90F1ir1eIaRu2jLIvFImk0Gk5UeGN4dygJXALe2GAwuCRbLpd5H5QnYsJbRZOB87fAkLTb7aZMJsNn4p0jeYCJoeGc8P4eBsPG6DooCXzxeJxMJhM3CkjcFVGu4o6JcsEadDsIF6BUKrmbeTweXncLDMK+QifGPDQLn8/HYLhQr9d76YqxWOzSMaEL2HfTC+zZ9AJ7LhH9BMRX/TQUcHiGAAAAAElFTkSuQmCC" InformativeScreenshot="c9dff59c1d55e46a78162e0a24450c48.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resumen Contable - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:UiElementExists DisplayName="Element Exists  Proveedores button" Exists="[success]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e76b3d9-5c64-477f-ad94-8a60e73d7f7c" InformativeScreenshot="4f75f58148752e7f5a97f3e2ea0b52f4" Selector="&lt;webctrl isleaf='1' tag='LI' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Waiting Facturas page log&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAs5JREFUOE99U0toE1EUfUmLv9YWbaErhbbYqf2g4kbd6VZ0I0FQYjIvEjuTpplx0dKi6cSFuhBREUSpuC8oSE2guFDpx4QmmZmEEGMWQQQX/WhaxYXajOdOp8WVFw68d3LvufeeN2FcjgQCsrIMmH5ZOcw2wmUYhtc0zWLOMKbz+XwnkZaH1VV5zxiwBLyreoV2hsKlQEi1CFxWnnk8nrpisdhiGkYJsGzo+k0S+HqpY3+V91YBC6h9E3timEDJbAmElIxHVXeWk8kmFKYdgXVd10dJ4Mfl9rZV3vPFEVhfFXtV5g8O9nNZnUBxDiLVgKScpmQzkzmGFSawQqwwP7+XOAurrfm7z6D4RZUfvP3pQv8e4pmmae5gMLiLS5GzPKROkahdYFluwGUn/ROWxuoh5nauzJVOp5vRrYEu/MrVQ1hrRhxQJAgKXq/X5jeDBFOpVEu5XN5uE3D7PPbMAe9xPgLKhXUUrFPDNCsweQYTdVPu5ORkHfwYzpnmB+d19jFD1wuOWRbIxzS2f1AlX9Ycc2s43yeBfDLZhrwVJ7+GhiMMo7/dJCBwi0a8GA43oXvKEcDrqHMeTdtGq6LoI+Wj8W88r4+ZCwsCCh/ghxjtRp0ofNLQUTGkPIUfJrDM5aGTxGez2eNGNvsIxUqlUtlhJ/8vPLLcyAci5wKyGveF1F6H/ifwhF3aVGvHyOtm3LaejLwoFAqNm11EeeiEKKtzXFKDvmC40+/3b3Q/EE2EhWhiURhPVAQtcYo48gGjStj1MzyaB/pAuwKhyDV48gv4jg9uFmIdTIjGF7vHExah63r8OdPe1JdKpVYU22bZhhnGXRImX2DoT8fcmhhSYwyFGVsgmqhhgntMs9zm9HQDXJ513P6Ty+VUErBfR1byjsA6l5Qw6xx71dcVjT9E8Y32sZdtlEiBsQV0vgMM4rz1NdJfHt/FE1FSRjkf3v0XsfPVdOm2ndQAAAAASUVORK5CYII=" InformativeScreenshot="3d66b0cb511a43f7ad0c12c257c17df6.png" Selector="&lt;html app='chrome.exe' title='Nuevo - Odoo' /&gt;" Url="https://go-dev.nybblegroup.com/web#id=&amp;action=281&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=263" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

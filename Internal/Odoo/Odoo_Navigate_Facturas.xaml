@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Odoo_Navigate_Facturas" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="888,1341" sap2010:WorkflowViewState.IdRef="Odoo_Navigate_Facturas_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Odoo_Navigate_Facturas" sap:VirtualizedContainerService.HintSize="494,1276" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Utilizar Navegador Chrome: Resumen Contable - Odoo" sap:VirtualizedContainerService.HintSize="452,1184" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="787ecb11-fe01-4f1b-92fd-dcd930e87f6e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="418,968" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="success" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="376,86" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2bc172f5-31da-45dd-8b3a-263353f38f85">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Proveedores'" sap:VirtualizedContainerService.HintSize="376,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="787ecb11-fe01-4f1b-92fd-dcd930e87f6e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#action=334&amp;model=account.journal&amp;view_type=kanban&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="449, 111, 92, 46" ElementType="Text" FriendlyName="'Proveedores'" FullSelectorArgument="&lt;webctrl aaname='                             Proveedores                        *' aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                             Proveedores                        *' aria-role='button' tag='A' type='' class='dropdown-toggle o-no-caret o_menu_header_lvl_1' check:innerText='Proveedores' /&gt;" Guid="16ae0e14-c5da-4b3e-ad37-52573b996b06" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAyCAYAAACj3t7EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOmSURBVHhe7ZnNaxpBGIf97/pH5NJrr54begl42UvBRnKINIRK2YNgSpOI5ENEMJDAElhQqmCCyiJWIR8sZAO/vjM7btRujCmSNzTvhAd2Z8aZnfeZL0hi76IDgY/El5/7EPhIpFY+QuBDBDAjApgRAcyIAGZEADMigBkRwIwIYEYEMCMCmBEBzIgAZkQAMyKAGRHAjAhg5g0IOMUAPtrbcWX8/IMANaCZdO/jpl5DIRlXn5v/VMDg+CEvu3EKzwd8d2+i3mvhDQhQHLhkoHuK1HaLhnsNr0Xv44End+Beqvcw+f0Gyqvqd3k0R8Cothm1s+tcA56DHD1nsg4GV+ZHtMq8/a2onv2jhdG4SX+IZs4yZRaKtT6Ce1N02cfNhIDZNkdOCVnTptOl+l4PozsqU2OZ149VQbsfmAIqatVgm3aew5JWQA3eLRDUS0YAfdCvGorr35BLWjhp04detVBdo49f3UHdo3caoApy4YwC3nf1c2rFDoVUSUiyAo8C4bsqQBYKpR4CDOGmqN5Gg4IaYFCxkVlJo6ik+RcoqzZ0/yRrNyzbrZCMaCKM2zyi76Lv/urqYA+OwwmgBOBuiPp3GwUrPbefkzbVpYmitt1MmqRSO/q79TgWZ0lnAA3x0kFRnQE6ABSo6DxQ9QN08uN3Qg+MBqqCmaIgjJ/Xw3wd5MO+Hmw16ncPbZKsxBfPSXEkTfGwzcwr+7tNs+JMfb0CJrbReW2V62pS9eB839IrKGvZyKsJFtVdjKVtQRFaQB9OlDcRgNi8TbheOHtytaFeGRlV55iCFZP8851wu4tJg8OJrTCuL9XmbQsHUdl03qyAef2kkjZOnD58tV1RiibguN0FeSEBcSvgGs318D1XpcB7DTQpFt6+mUVqts4Gy6BnJi1/LSqu7LkrYNRAgZ5jV0BsPxZyn23Y+hyjLWjtCB1anWpyTNd7mhcQMHsG5OF26d0ctLpOktpUh+Z9D2fjWZSivLsAN064X6tBNrs9uGkqU32oQ/kwHy5/dQvrtlD+ZMrob6EzYGN6754V8Hg/4aoN2ubqvVp6zQKIR29BYyycqUOtXZnIm72xBBi5leimMXU7oSANKjtmptItiILum1tQ0L3A4PZhC3zyFjRzlX60H6uGzm+aSCb5XRcHL7MFCctEBDAjApgRAcyIAGZEADMigBkRwIwIYEYEMCMCmBEBzIgAZkQAMyKAGRHAjAhgRgQwk/jw7j0EPhLmX5qSmJIIYE3AH65cvGj7IKw2AAAAAElFTkSuQmCC" InformativeScreenshot="2db8c284b1caded2bb0ac733e126f0c2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resumen Contable - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Facturas'" sap:VirtualizedContainerService.HintSize="376,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="787ecb11-fe01-4f1b-92fd-dcd930e87f6e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/web#action=334&amp;model=account.journal&amp;view_type=kanban&amp;cids=1&amp;menu_id=263" DesignTimeRectangle="470, 169, 50, 15" ElementType="Text" FriendlyName="'Facturas'" FullSelectorArgument="&lt;webctrl aaname='Facturas' idx='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Facturas' type='' tag='SPAN' class='' check:innerText='Facturas' /&gt;" Guid="bd1b2bc7-d196-42d2-a48d-332daf6bd1ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAATCAYAAADbJP5YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJcSURBVFhH7ZTbq6FhFMbnr0UUieQYbmTnAuUUKeJKSVLKDbnYlCKlJOWQXHCByCEbe03PyqdvD03MTFN2nvqKd72H9Xuf9a4f9E31Ans2vcCeTRewxWJBer2eJBLJl+/t7Y12u9151mPCOqyv1+vnkf+nK7B/mcRTgLXbbbJYLOyiVqulZrN5jhANh0OyWq0klUo51mg0qNfrkUqlujgfDoep3++TzWbjsyAxuPA7Go2SWq2mXC7HY8lkkuRyOclkMgqFQrTZbHgt9vD7/TyOeCqVosPhwDHoLrDpdEpGo5Gq1SqdTid6f38ns9lM8/mcZrMZ2e12KpVKHOt0OhwbjUZXjt0D5nQ6aTwe8/90Ok0ul4vW6zV/iAEYSiQSFIlEaL/f02Qy4UuvVCocg377xnDjSAY3sVqtOHEIMHAIMTiHhLbbLceOxyO7C+g/AavVahyD4A7GBWWzWXYeArTD4eALRF6/zr3Lsc/PT3ZLp9NdQRcKBU5IvKkgceLQPWDi8zEvEAhwqQnnCmBwCmcbDAZSKBRcsg+DdbtdLkW8G0BiLhK85RjicPfj4+OvwOB8MBj8kjDKEGDiM6Dlcsllms/n+T90F1ir1eIaRu2jLIvFImk0Gk5UeGN4dygJXALe2GAwuCRbLpd5H5QnYsJbRZOB87fAkLTb7aZMJsNn4p0jeYCJoeGc8P4eBsPG6DooCXzxeJxMJhM3CkjcFVGu4o6JcsEadDsIF6BUKrmbeTweXncLDMK+QifGPDQLn8/HYLhQr9d76YqxWOzSMaEL2HfTC+zZ9AJ7LhH9BMRX/TQUcHiGAAAAAElFTkSuQmCC" InformativeScreenshot="c9dff59c1d55e46a78162e0a24450c48.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Resumen Contable - Odoo' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Waiting Facturas page log&quot;]" />
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean">
+                  <ui:UiElementExists DisplayName="Element Exists  Proveedores button" Exists="[success]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e76b3d9-5c64-477f-ad94-8a60e73d7f7c" InformativeScreenshot="4f75f58148752e7f5a97f3e2ea0b52f4" Selector="&lt;webctrl isleaf='1' tag='LI' /&gt;" WaitForReady="COMPLETE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                </ActivityFunc>
+              </ui:RetryScope.Condition>
+            </ui:RetryScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAs5JREFUOE99U0toE1EUfUmLv9YWbaErhbbYqf2g4kbd6VZ0I0FQYjIvEjuTpplx0dKi6cSFuhBREUSpuC8oSE2guFDpx4QmmZmEEGMWQQQX/WhaxYXajOdOp8WVFw68d3LvufeeN2FcjgQCsrIMmH5ZOcw2wmUYhtc0zWLOMKbz+XwnkZaH1VV5zxiwBLyreoV2hsKlQEi1CFxWnnk8nrpisdhiGkYJsGzo+k0S+HqpY3+V91YBC6h9E3timEDJbAmElIxHVXeWk8kmFKYdgXVd10dJ4Mfl9rZV3vPFEVhfFXtV5g8O9nNZnUBxDiLVgKScpmQzkzmGFSawQqwwP7+XOAurrfm7z6D4RZUfvP3pQv8e4pmmae5gMLiLS5GzPKROkahdYFluwGUn/ROWxuoh5nauzJVOp5vRrYEu/MrVQ1hrRhxQJAgKXq/X5jeDBFOpVEu5XN5uE3D7PPbMAe9xPgLKhXUUrFPDNCsweQYTdVPu5ORkHfwYzpnmB+d19jFD1wuOWRbIxzS2f1AlX9Ycc2s43yeBfDLZhrwVJ7+GhiMMo7/dJCBwi0a8GA43oXvKEcDrqHMeTdtGq6LoI+Wj8W88r4+ZCwsCCh/ghxjtRp0ofNLQUTGkPIUfJrDM5aGTxGez2eNGNvsIxUqlUtlhJ/8vPLLcyAci5wKyGveF1F6H/ifwhF3aVGvHyOtm3LaejLwoFAqNm11EeeiEKKtzXFKDvmC40+/3b3Q/EE2EhWhiURhPVAQtcYo48gGjStj1MzyaB/pAuwKhyDV48gv4jg9uFmIdTIjGF7vHExah63r8OdPe1JdKpVYU22bZhhnGXRImX2DoT8fcmhhSYwyFGVsgmqhhgntMs9zm9HQDXJ513P6Ty+VUErBfR1byjsA6l5Qw6xx71dcVjT9E8Y32sZdtlEiBsQV0vgMM4rz1NdJfHt/FE1FSRjkf3v0XsfPVdOm2ndQAAAAASUVORK5CYII=" InformativeScreenshot="f0e75298fb551c43c6da176aa1fc1334.png" Selector="&lt;html app='chrome.exe' title='Resumen Contable - Odoo' /&gt;" Url="http://go-dev.nybblegroup.com/web#action=279&amp;model=account.move&amp;view_type=list&amp;cids=1&amp;menu_id=263" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

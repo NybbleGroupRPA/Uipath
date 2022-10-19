@@ -1,0 +1,174 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Odoo_Login" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="888,1919" sap2010:WorkflowViewState.IdRef="Odoo_Login_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Odoo_Login" sap:VirtualizedContainerService.HintSize="494,1854" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Registrar mensaje de Inicio" sap:VirtualizedContainerService.HintSize="452,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio de login&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Utilizar Navegador Chrome: Login | My Website" sap:VirtualizedContainerService.HintSize="452,1500" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9a23aadc-281a-43ef-9ea0-a8bb32e5ca80" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="418,1284" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="success" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="376,86" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2bc172f5-31da-45dd-8b3a-263353f38f85">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'User'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9a23aadc-281a-43ef-9ea0-a8bb32e5ca80" Text="rpabot" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/en/web/login" DesignTimeRectangle="650, 288, 300, 35" ElementType="InputBox" FriendlyName="'INPUT login'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control ' aaname='Email' /&gt;" Guid="ae80cfd3-18e6-4a79-a80e-075f3f49531c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAAnCAYAAACIXxRkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANpSURBVHhe7d3dS1NxHMfx/mBvvJBh6IVgoUhGXqgkXYQXgoQX6YWghIGUlZtTp80nTGuZmsc9ns3N+e18f2fndGZCFHPu4PsFH/BsZ16++R3LeiAAEFIEDEBo1QWsYJdk7yAl8c0diSW2GWOsJaZN0jZpo4L8gOkbetPpWVqq1WrtVQC4e9okbZM2KhgxP2BaN70BAFqVNkpb5fEDpmXj5AWglWmjtFUeP2D6nAkArS7YKgIGIFQIGIDQImAAQouAAQgtAgYgtAgYgNAKbcDs1JYkUkX34nhBejuGZPbYvQRwPzQuYOsT0tbR/ecGFuSodksjJSZ7pG10STJ6QcCAe6nBAZuQeO2yqQgYcC81LWBHc0PS9nJe3r7ol3Y9mXX2y8jiiWSSM9Lb5Z7W2p/MSMKufcBh7y/IyGPnpKX3dw2a+z3xcee18Q33goAB91JzAxYZlqltS8qVihwtPHeue6T92axspStStg9l+mm3dLzacz+QXZKhyCMZi+ak7FyWU/PSFxmUqdrvbhIwAA0OmHuSCm5s3X3bPYGtuhequipj+v5K7dph7vF+ZlYpSiZbNPFyncjsQLf0vbHMFQED0NwTmBccY8MNWC1wqi5gjsxu4BGytt459zGSgAFo3YCZKOkjpPPIaf5lH/cERsAAeFo3YPr96v4KxolM9xMwAL+1bsD2Z6TDidLktiW2bcnWzLD500sCBsDT4IC5P6eqnxu1fw6YXi+Oy8NO53tEeqR3MirTo93y8PWheY+AAWhcwACgyQgYgNAiYABCi4ABCC0CBiC0CBiA0CJgAELrvwJ2dXXlT/93XG/B1xlj7LYXXd/yv/5rwPSmYLCCu7y8vPF1xhi7rS2vJf2v/YDFN3fMC57r4dJY3bRKpcIYY03ZxcWFcwJL+td+wPYOUnJ6ljZfB+N1U6zK5bKZfjPGGGvWUkcnktz94l/7ASvYJXMKOz61TKSuh8sLVqlUqluxWGSMsVtdoVCQb99/yIeVhJxZaf91P2Aql7dlZ/+rxJwj2vLqZ/nk7GN8U5ZiCXfRdXkfXTN7t7zKGGNN2VJsTRLJXTn9aZmYefMDdv2RUU9d3olLS2fbtvlAPp+XXC7nL5vNMsbYncwEzPuZlxev4ONiMFz6gUwmI+l0Ws7Pz80sy2KMsTuYJb8AbNC6+VjfXkIAAAAASUVORK5CYII=" InformativeScreenshot="60a6baca5e6a1cbb4961cb3e84e8b0c9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | My Website' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="650, 259, 35, 21" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAZCAYAAACy0zfoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGgSURBVFhH7ZSxa8JAFMb7rzgIOsXptpYundqpIrS4RDpkK3SyUEigYkHpkLEgVHALZKuDCEXcFecOglRBUCgoCG5f3+USa5QWc1bIkA8e3N177+539+7uCCFWBCerCE5WEdyWZk3klSQSWh0T3u+UEYsnESv1HLenFVy3RE4esGVldN2Yf9OsjTxLQrkNCHeiFfBsmmvWxKcbczDtCpezp+6IX8KvofJWRe44RW2GtEHggyb0DHNylcwLugs3YdGHZVyDUfli8RTYVQHWx1L4xjZyHObGDnZyf8ORMRW6WUCWysIXTSgMWcOErgrAhLPAHI17voEU0mYdLbuMNIc8pSvC+WThNq3YWfdfotYX/YmtOf6LV3dgZCPLc7wFfVqiZfB8FdaIurJwm3euMVj3a7DGou/BrU56c0FfWX/M2exhyrorHJX1jpf1HPr7ELOvOVqPYv4QwPVQ5O3VN+SVdU+4376SYHBD1DI8nh7EA81hqFC4j2wvuG0Tuw8GRxp5Xwx9I1oVlaczJ15v03MNChdGRXCyiuBkFcHJKsRwwDcBfZw5L1oZqAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="9a23aadc-281a-43ef-9ea0-a8bb32e5ca80" Text="rpa567" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/en/web/login" DesignTimeRectangle="650, 368, 300, 35" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control ' aaname='Password' /&gt;" Guid="e0308b27-01ce-4809-8b3d-86e8517285e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAAnCAYAAACIXxRkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATlSURBVHhe7dzfSxtpFMbx/YNz40UISmN1SUpCscWAuhiCXYIIsQSxXmRRi4pIqLgqxmLSNUXFhlor0WxjNyE8e847PzIRL3ZB05nyfGDAyUzSeNEv532b9BcQEQUUA0ZEgdUTsG/N7zg+Ocfe+w/4s1ThwYMHD18c2iRtkzbKyw2YXtCbvnyto9Pp2I8SEf142iRtkzbKGzE3YFo3vYGIyK+0UdoqhxswLRsnLyLyM22UtsrhBkzXmUREfudtFQNGRIHCgBFRYDFgRBRYDBgRBRYDRkSBxYARUWAxYP/bBQrPo0gf2KdE9MM8XMAO5hAKR3uOgZFJzO5coWXf8nNgwIj84oEDNoc9+xTtW1xWCkhEoph6d2s/+DNgwIj84vECZqsuJhGaKOJaTzpX2M5NIjyoE9oowuNLKDXNbUbzaAmJkVF3essdNuwrolbE1DPrWujJC0xtfLImu8oCwhH5c51vPt0UMRZOIn9in+MU+ZhGtG2d3pSRn0hiQF9nMImxpTLct/B5DTH5Hd68ncaAhNeJVG0ziyF9z5FRxHIreJVkwIj8oK8Bq+bjCL1cwdk/ctJpYDsr5zP7VogkPKlIHOmdhpy3cb0zh3B4EqvmO+WnyI1EkfhDoiWhap2tyGQXx+yRvs4h0pFusFrvsiZyseUL6wETtGms38jPHYnZsyievj7EtfSsVd9HWl736eKpda8JWBThmU1ULxtoavNMICeRr8j7kqnyrJiV98WAEfnBowaspVPTcDcmrb8lChovhz4nMo+S/mziMYMtdxxqoLq7j6oJmERKpqrcR3NBtFE72keppoVpYysjcXt7Za7sZWXaykr8nKlP/4zna6g5Pw8voOT9nvqRZ4Iz7yGLLc971NcL58r2mbrAG05gRL7wwAGzNu/dYzCORL6MaycYbe8S0jmc6F1gfVqmNV3W/V7AauXCTFuWNsqLKVnWyRIus4TC7qmZoBzXm9MIZXZkcjvG7LBMW3WdyqwQ6QQ4ZE9YteWUfZ+HmdBSKHyWn+0lZDfC1n7X2KZnKcs9MCLfeNQJrFdbphlrCVk1azNxz3NatWNsLc9jLDaKUHIJZc801KqforRRwNSYXBuZwbpGR2l4dJI7KWDITF7WVJY+kNi8lKWm/evcG7DLNSQYMKJA6mPA7vmLv9t9TqtWxvaRTF3WFaBTlmnKvl/Cta1Tl3VFNLA67tnnMhv1MrlNvOguV3UvLJNFyrsk/E9LyN7fgUtIIv/qY8AaWP9NYpAp4qx5i+b5DtK/epaQzmb5X9a0oxv1sXDc2veqyzIvEsdU0fpMWasuz5W4pba6k5GGJuT910ezNJTHnL0wZW/iJxaP7U38Q8zqpn7PJv6d3+HOJn51Y4ab+EQ+0ceAiWYZOV3+SQAGYlkU1uYx5JmQLncX3I9RhJ6kkC46E5Y89eNa92MUdz/+IMzEJdNVd1ayJr7ulGa7kfcwHu/5GIW7R3dfwAQ/RkHkTw8XMCKiPmPAiCiwGDAiCiwGjIgCiwEjosBiwIgosBgwIgosBoyIAosBI6LAujdge+8/oNPxfmGQiMhftFHaKocbsOOTc3z5av4jLiIiX9JGaascbsC+Nb+bsukNnMSIyE+0SdombZS2yuEGTOkFrZvepOtMHjx48PDDoU3SNnnjpXoCRkQUJAwYEQUU8C81TQ3f7gRW1AAAAABJRU5ErkJggg==" InformativeScreenshot="1d4646f437c363167809e6235936b6cf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | My Website' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="650, 339, 62, 21" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAZCAYAAACFHfjcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOfSURBVFhH7VYxa2JBEL6/kiLgVVrZGdKEFIZAFCFyTUIKJUVCColw4QknChGLV1gIwgnCK4RXXEg4DiGIIMZCsQmBIEKIAcFAQEGwEL6b2V2jJuTQO7gieR883NmZnd35dmbWT7AgYBGhYBGhYBGhYBGhYBGh8PGIqCWwtPwZS6cNNSHxTET9lJRsMPXZ1w+QKj8qi3eCeYlYCUSR1HUkIwE47TznwO6Pd0TGvETsmlNB32axwYtW07hmedBCPuJ/Jsi5HUX+dihMGd2rNILrTuHH5vJDM1t41narSO27YWd/dhe8ERPNAc1fyYN9ybelnZAdiNWkeJ1eI3kNqRspo0N+Ai7Y2I/TjWCqiu5IqmQMAWRMHRt0RhHL6BHFU7/Y1+YiXepE7LcYEaMqYrxoOYE6+vgVdtDYAa9+gaKZgJcJWSUdR3tnwMu2vgTOyiU6rLQ9/NknZRs5H/vxI3ZeRTEdEIHYjgro9Qo45HWRkiBNBk6ZmebIac8jXhdFkZWDEjRxCURAXIe2I0lf0xti7cvy5ljuDb8Y2zZDiMVDgiChX4SIbiGKFV7kM3Cv5iYYohjhNTvIP5CoUm7je0uqn1qolKuo3DIRDUnoVhZNcXt9NFlXbqGHFnJbpBNZp8Zsu2eiS+uSfHAxpvOYAaHzGip7Ri1khH0Iv3qTGI4LvCdj7O8AZ09yZliKSv+LNEvx2T1I1lSCz5TG5BNpPKBg16XMTVbLmKh35DImrX7qlvaczpEs8rUJ4XWds4eCuTGxS1mkRTh9x/I4OyZnHJcNQ845kKS4XuvVBYxLm7Fws+TPKKGpmJRpygd2Q7tso/fUR/Hbi42HbVSMKIKbqobJNtlQJI6GuC8b0PY9z0SOU1rekgPH4RD9Uhl0ZLkch2U9x66ki/9KxEyPmIFyKvoFY1wacuP7yzSRl6UghBIoT6XgHfUMIjZTUr6p92jTvjry5oU99w08Ir+nZJX2jHlLY0LEP5TG20SMGx41y6/8vO7IF0BtPGzoWKOxbVsXzTIXlqUQPKd6HVKtc9nY/UhyszROhO3SwQUFzbhBanV2/2bOI+SlLQNNMUOYs1lOZ8xMs9RPZINnv39PBOGhAM3Hm9PTGcgiE5cdXivJ9H/5fB4aDfTU0/bq+QwZqKubZlTivL8HOdVrcZMWjdpGQc6A/fzx+Zwlgp/PSkpeGj+fqVxC/iV4i4iPDosIBYsIBYsIBYsIBYsIBYsIBYsIAeA3Lhoh9pXVBGQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Clic 'Log in'" sap:VirtualizedContainerService.HintSize="376,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9a23aadc-281a-43ef-9ea0-a8bb32e5ca80" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://go-dev.nybblegroup.com/en/web/login" DesignTimeRectangle="650, 435, 300, 35" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary btn-block' aaname='Log in' check:innerText='Log in' /&gt;" Guid="7c868d2a-f9de-49ad-adbc-25b04e05f8f5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAAnCAYAAACIXxRkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALLSURBVHhe7drBShtRFIdxNz6Ij9AnEFz6CL6GS7d5hC4Vi8tCoBBSYiFQaIhEghYKoUExtIFIy0BCglYxcnpPnDPMZMZY08HOpd8ffmByZ+JGPmLIijDGmKcjYIwxb5cIWDsIZL1WldWDfVl5swcAhaBN0jZpo+KLAqYHhAtAkWmj4hGLAqZ1y7oBAIpEW2WLAsa7LwA+0FbZooBlXQgARWQjYAC8YyNgALxjI2AAvGMjYAC8YyNgALxjI2AAvGMjYPinNk+7snt6mHkGPMZGwJB2NnR/EUPZzTrL2Wv9VVc92co4Ax5jI2BIe8GAAcuwETCkPRWwSlvKo9uHPxy34agn2+XYeb0jJzfh4d1Y6j/H7ofs19sduaNR9+Hx8cBdNZby10CG97O75dekn3xtwLERMKQtDNihlCcuLFd9KdXeylrts9Q1VpOebM7OP0n12j2+Hkip/l42mh1pzmL2pwFzrz12Qay9c/eey4UL2eX3j6n78H+zETCkLQrYLDLXUm3Enmv05VJupX5s5+HPdr7g9TLfgX2YOx+G50DIRsCQtihgenb3Q0qJ57/IiXun1DkLz+fvfVbAktclzoGQjYAh7dkB60rH3UHA8FJsBAxpiwL21L+QrYxzAoac2QgY0hYFzD7En33QHn6Irx/az32Ir+c7S32IT8DwNBsBQ9osYBmzkFTaUp0kv0axU4ndP/81ikALR8CQHxsBQ/7K7p1Z7PFGbyxyO5Dt2HPA37ARMOSs6f6FnMrFt5ZslPfkVeNcOlP3/uuylXEtsBwbAUPu1o5ctG5ctXT3UxkGHdni2/TIkY2AAfCOjYAB8I6NgAHwjo2AAfCOjYAB8I6NgAHwji0K2OrBfuaFAFAk2ipbFLD1WjXzYgAoEm2VLQpYOwh4Fwag0LRR2ipbFDCdHmjdCBmAItEmaZvi8dIlAsYYYz6NgDHGPJ3Ib8UyzYLmnHQlAAAAAElFTkSuQmCC" InformativeScreenshot="d62c7aeea26621953ba120cea8badccc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | My Website' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Waiting home page log&quot;]" />
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean">
+                  <ui:UiElementExists DisplayName="Element Exists 'A  #menu_id=263&amp;action_...'" Exists="[success]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e76b3d9-5c64-477f-ad94-8a60e73d7f7c" InformativeScreenshot="d04e9af55955628a6e90a4a8a1e397cb" Selector="&lt;html app='chrome.exe' title='Odoo' /&gt;&lt;webctrl aaname='Contabilidad' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                </ActivityFunc>
+              </ui:RetryScope.Condition>
+            </ui:RetryScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVDhPdZO7SgNBFIZHsZB4fxQhjaCC6K5BRexMLdY+gXZesusNO0EEkyASg4ggCHbiS9goFmKhIt4QK/X7d2fIiMnAx8ye858zZ2bOGjd2RxZNKYxMKYhamfthAfahCgUIoQ1MMSjYKDuKYcHsDCUJeqEMj/ANPx4voGTZ7eH5JCYNJtvRxJaCJ+Ea/KB63MDEfi5OK+FD9MEtONE7nEMMG3ABn+D82igLSYJ2OAbnVKLpYhhlmE05t0q5UQfrGbgHp6tQQUYJcqDzyfgB+XJIee6MDJV6MLYh7Sx8We0zjMioG3ZZz9mtDWxobcgGXWguPf2yEhx6hli77wUrNqw2VEV5NJZ+09NXZNDTOEPUKIFs8knj6asyrHuGM8rM1D9CQehizzx9knEK9GwyvNlvOvLvJSa21CeNtK8wpovpYaE3d1mvIGS3FuYk0K7VyvI53Ql0uMxyPoBzPoFaes6itWzOfwcDkHYiJTYzq1H8JI1QM+V3h5fSVnZntEkC0HHcnfjo7KcwiLbp30XvBeoJdWDUjUg/1hroicUqjEMn1HY2xvwCiNq5lKtvEQcAAAAASUVORK5CYII=" InformativeScreenshot="43482bbe90cdd406ce3a013204638ba7.png" Selector="&lt;html app='chrome.exe' title='Login | My Website' /&gt;" Url="http://go-dev.nybblegroup.com/en/web/login" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Registrar mensaje de Fin" sap:VirtualizedContainerService.HintSize="452,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Fin de login&quot;]" />
+  </Sequence>
+</Activity>
